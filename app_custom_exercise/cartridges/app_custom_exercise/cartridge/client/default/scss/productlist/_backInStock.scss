@@ -1,0 +1,186 @@
+.back-in-stock-popup {
+    padding-right: 0 !important;
+
+    .modal-content {
+        border-radius: 0;
+
+        .modal-header {
+            .title {
+                margin-bottom: 0;
+                font-weight: 700;
+                font-size: $fontSize14;
+
+                @include media-breakpoint-up(md) {
+                    font-size: $fontSize18;
+                }
+            }
+
+            button {
+                &.close {
+                    padding: 8px 15px;
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    .notify-me-form {
+        .form-group {
+            .form-control {
+                height: 2.6em;
+                font-size: $fontSize15;
+
+                &:focus ~ label,
+                &.has-content ~ label {
+                    top: -0.7143em;
+                }
+
+                &:focus {
+                    ~ .focus-border {
+                        width: calc(100% - 30px);
+                        top: 2.7em;
+                        left: 15px;
+
+                        @include media-breakpoint-up(lg) {
+                            top: 2.42em;
+                        }
+
+                        @include media-breakpoint-up(xxl) {
+                            top: 2.7em;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-up(lg) {
+                    height: 2.32em;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    height: 2.6em;
+                }
+            }
+
+            label {
+                top: 15px;
+                left: 15px;
+            }
+
+            .focus-border {
+                top: 2.7em;
+
+                @include media-breakpoint-up(lg) {
+                    top: 2.42em;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    top: 2.7em;
+                }
+            }
+
+            &.title {
+                display: none;
+            }
+
+            &.button {
+                @include media-breakpoint-down(xs) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .btn-submit {
+            @include btnBlack();
+
+            padding: 9px 3px;
+            font-size: 2.3vw;
+            line-height: 1;
+            margin: 0;
+            width: 100%;
+
+            @include media-breakpoint-up(md) {
+                font-size: $fontSize14;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                line-height: 1.2;
+                font-size: 0.879rem;
+                letter-spacing: 0.05rem;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 1.099rem;
+            }
+        }
+    }
+
+    .message {
+        margin-top: 0.25rem;
+        font-size: $fontSize12;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            font-size: $fontSize15;
+        }
+    }
+
+    .success-svg-wrapper {
+        height: 125px;
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            height: 175px;
+        }
+    }
+
+    &.submit-success {
+        .message,
+        .success-svg-wrapper {
+            display: block;
+        }
+
+        .modal-header,
+        .notify-me-form,
+        .modal-footer {
+            display: none;
+        }
+    }
+
+    &.modal {
+        .modal-footer {
+            .add-to-wish-list,
+            .go-to-wish-list {
+                background-color: transparent;
+                box-shadow: none;
+                border: none;
+                color: $black;
+
+                &:hover {
+                    .fa-heart-o {
+                        &::before {
+                            content: '\f004';
+                            color: $red;
+                        }
+                    }
+                }
+
+                &:active,
+                &:focus {
+                    background-color: transparent;
+                    color: $black;
+                }
+
+                .fa-heart {
+                    &::before {
+                        content: '\f004';
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}

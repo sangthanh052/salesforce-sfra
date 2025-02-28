@@ -1,0 +1,97 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js')
+    var sitePrefsHelpers = require('*/cartridge/scripts/helpers/sitePrefsHelpers');
+    var pageLayoutConfig = sitePrefsHelpers.getPageLayoutConfig();
+
+    if (
+        !empty(pageLayoutConfig)
+        && (pageLayoutConfig.useNewHeader || pageLayoutConfig.useNewFooter)
+    ) {
+        assets.addCss('/css/newGlobal.css');
+    }
+</isscript>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--[if gt IE 9]><!-->
+            <isinclude sf-toolkit="off" template="/common/scripts" />
+        <!--<![endif]-->
+        <isinclude template="/common/htmlHead" />
+        <isactivedatahead/>
+        <isinclude template="/components/schema" />
+
+        <iscomment> 
+            Add preload for the first largest image in PDP to improve the LCP score
+            The LCP can be the first product image or the product banner
+        </iscomment>
+        <isif condition="${!empty(pdict.product)}">
+            <isset name="product" value="${pdict.product}" scope="page" />
+            <isif condition="${product.productStar === '5Star' && !empty(product.images.banner) && product.images.banner.length > 0}">
+                <link rel="preload" href="${product.images.banner[0].url}" as="image" />
+            <iselse/>
+                <isif condition="${!empty(product.images.large) && product.images.large.length > 0}">
+                    <link rel="preload" href="${product.images.large[0].url}" as="image" />
+                </isif>
+            </isif>
+        </isif>
+
+    </head>
+    <body>
+        <iscomment>
+            hook for integration which need to inject after body
+            IMPORTANT: Note that this hook will be called to cached as well as uncached pages
+                        which means you need to put privacy information into another remote include
+        </iscomment>
+        ${dw.system.HookMgr.callHook('app.template.htmlBody', 'htmlBody', pdict) || ''}
+
+        <isinclude url="${URLUtils.url('Page-BrandSite')}" />
+        <isinclude url="${URLUtils.url('Page-B2BCustomer')}" />
+
+        <div class="page" data-action="${pdict.action}" data-activelocale="${request.getLocale()}" data-querystring="${pdict.queryString}" >
+            <isif condition="${!empty(pageLayoutConfig) && pageLayoutConfig.useNewHeader}">
+                <isinclude template="/newComponents/header/pageHeader" />
+            <iselse/>
+                <isinclude template="/components/header/pageHeader" />
+            </isif>
+            <isreplace/>
+            <isif condition="${!empty(pageLayoutConfig) && pageLayoutConfig.useNewFooter}">
+                <isinclude template="/newComponents/footer/pageFooter" />
+            <iselse/>
+                <isinclude template="/components/footer/pageFooter" />
+            </isif>
+        </div>
+        <div class="error-messaging"></div>
+        <div class="modal-background"></div>
+        <iscontentasset aid="cookie_hint" />
+         <!--[if lt IE 10]>
+            <isinclude sf-toolkit="off" template="/common/scripts" />
+        <![endif]-->
+
+        <iscomment>
+            hook for Marketing Cloud connector & other integration which need to inject
+            logic at the page end
+            IMPORTANT: Note that this hook will be called to cached as well as uncached pages
+                        which means you need to put privacy information into another remote include
+        </iscomment>
+        ${dw.system.HookMgr.callHook('app.template.afterFooter', 'afterFooter') || ''}
+        <div class="gift-certificate-data" data-url="${URLUtils.https('GiftCertificate-GetPopUp', 'pid', '')}" data-make-empty-basket="${URLUtils.https('Checkout-PurchaseNow')}"></div>
+        <isinclude url="${URLUtils.url('ConsentTracking-Check')}"/>
+
+        <isif condition="${!empty(pdict.enabledPlugins)}">
+            <isif condition="${pdict.enabledPlugins.FacebookTracking}">
+                <isinclude url="${URLUtils.url('FBTracking-AppendEventID', 'action', pdict.action, 'querystring', pdict.queryString)}"/>
+            </isif>
+        </isif>
+
+        <isif condition="${pdict.searchAdditionalTemplates}">
+            <isloop items="${pdict.searchAdditionalTemplates}" var="template">
+                <isinclude template="${template}"/>
+            </isloop>
+        </isif>
+    </body>
+</html>

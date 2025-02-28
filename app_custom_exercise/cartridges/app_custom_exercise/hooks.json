@@ -1,0 +1,12 @@
+{
+    "hooks": [
+        {
+            "name": "app.template.newsection360image",
+            "script": "./cartridge/scripts/hooks/productDetailPage/html360Image.js"
+        },
+        {
+            "name": "app.product.customMappingVariantAttr",
+            "script": "./cartridge/scripts/hooks/product/customMappingProductAttr.js"
+        }
+    ]
+}

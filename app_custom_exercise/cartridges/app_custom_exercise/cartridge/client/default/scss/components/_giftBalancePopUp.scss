@@ -1,0 +1,112 @@
+.balance-core-pop-up {
+    .modal-header {
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 0 15px;
+
+        .modal-title {
+            text-align: center;
+            padding: 15px 0;
+            font-weight: bold;
+        }
+
+        .close {
+            margin: 0;
+            font-size: 2em;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .modal-body {
+        h4 {
+            font-size: 1em;
+            max-width: 85%;
+            margin: 0 auto;
+            padding-top: 1em;
+            padding-bottom: 1.5em;
+        }
+
+        .gift-card-form {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 85%;
+        }
+    }
+
+    form {
+        .gift-card-form {
+            .invalid-feedback {
+                display: flex;
+                flex-wrap: wrap;
+                color: $black;
+                padding-bottom: 1em;
+                padding-top: 0.25em;
+                text-align: left;
+                font-weight: 500;
+                font-size: 1em;
+                line-height: 1.75em;
+
+                .gift-code {
+                    font-weight: bold;
+                    font-size: 1.1em;
+                }
+
+                .expire-day {
+                    width: 100%;
+                    flex: 0 0 100%;
+                }
+
+                .balance-info {
+                    width: 100%;
+                    flex: 0 0 100%;
+                }
+            }
+
+            input.is-invalid {
+                ~ .invalid-feedback {
+                    color: $red;
+                    font-weight: 400;
+                    font-size: 80%;
+                }
+            }
+        }
+
+        .submit-button {
+            margin-bottom: 1em;
+            min-width: 100%;
+        }
+
+        .button-apply-now {
+            display: none;
+            width: 20%;
+            flex: 0 0 20%;
+            font-size: 0.9em;
+
+            button {
+                border: none;
+                border-bottom: 1px solid $lightGray;
+                width: 100%;
+                cursor: pointer;
+                font-size: 0.8em;
+                padding: 0;
+
+                @include media-breakpoint-up(md) {
+                    font-size: inherit;
+                    padding: 1px 6px;
+                }
+
+                &:visited {
+                    border: none;
+                }
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+    }
+}

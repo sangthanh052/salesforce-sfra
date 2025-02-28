@@ -1,0 +1,1195 @@
+$terminaRegular: 'Termina-Regular';
+$terminaMedium: 'Termina-Medium';
+$terminaDemi: 'Termina-Demi';
+$terminaBold: 'Termina-Bold';
+$terminaLight: 'Termina-Light';
+
+@keyframes aniFadeInContent {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.proxis-campaign {
+    img,
+    picture {
+        display: block;
+        width: 100%;
+    }
+
+    .has-animation {
+        opacity: 0;
+
+        &.load-animation {
+            opacity: 1;
+            @include animation(aniFadeInContent 0.5s ease-in-out);
+        }
+    }
+
+    .spinner-text {
+        font-family: $terminaRegular;
+        font-size: $fontSize11;
+        line-height: $fontSize18;
+
+        @include media-breakpoint-up(md) {
+            font-size: $fontSize15;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: $fontSize14;
+        }
+    }
+
+    .tab-content-sub-text {
+        font-weight: 200;
+
+        @include media-breakpoint-up(xl) {
+            width: 50%;
+            float: left;
+            padding-right: 30px;
+
+            &.right-text {
+                padding-left: 15px;
+            }
+        }
+
+        .mini-text-content {
+            font-size: $fontSize10;
+        }
+    }
+
+    .proxis-banner {
+        height: 70vh;
+        width: 100%;
+        background: lighten(saturate(adjust-hue($black, 230), 60), 1.96);
+        position: relative;
+        overflow: hidden;
+        min-height: 550px;
+
+        @include media-breakpoint-up(md) {
+            height: 80vh;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 55vh;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 110vh;
+        }
+
+        .image-banner {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            max-width: 80%;
+
+            @include translateX(-50%);
+
+            @include media-breakpoint-up(lg) {
+                max-width: 30%;
+            }
+        }
+
+        .proxis-banner-title-box {
+            color: $white;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            top: 13%;
+            letter-spacing: 0.5px;
+
+            @include media-breakpoint-up(md) {
+                top: 10%;
+            }
+
+            @include media-breakpoint-up(lg) {
+                top: 15%;
+            }
+
+            .proxis-banner-title {
+                font-family: $terminaRegular;
+                font-size: $fontSize30;
+                line-height: $fontSize45;
+            }
+
+            .proxis-banner-description {
+                font-family: $terminaMedium;
+                font-size: $fontSize13;
+                line-height: $fontSize18;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .proxis-section {
+        max-width: 100%;
+        position: relative;
+        z-index: 5;
+
+        .proxis-section-content {
+            position: absolute;
+            width: 100%;
+            top: 20%;
+            color: $white;
+            text-align: center;
+
+            @include media-breakpoint-up(md) {
+                top: 30%;
+            }
+
+            @include media-breakpoint-up(lg) {
+                top: 15%;
+            }
+
+            .proxis-section-title {
+                font-family: $terminaMedium;
+                font-size: $fontSize20;
+
+                @include media-breakpoint-up(md) {
+                    font-size: $fontSize30;
+                }
+            }
+
+            .proxis-section-description {
+                font-family: $terminaRegular;
+                line-height: $fontSize18;
+                margin: 15px 0;
+                padding: 0 15%;
+
+                @include media-breakpoint-up(md) {
+                    font-size: $fontSize20;
+                    line-height: $fontSize25;
+                    margin: 30px 0;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 16px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    padding: 0 36%;
+                }
+            }
+
+            .proxis-section-icon {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                .proxis-icon-text {
+                    font-family: $terminaMedium;
+                    line-height: 60px;
+                    font-size: $fontSize14;
+                    display: inline-block;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: $fontSize17;
+                    }
+                }
+
+                .proxis-icon {
+                    display: inline-block;
+                    margin: 0 10px;
+
+                    .proxis-icon-img {
+                        max-width: 60px;
+                    }
+                }
+            }
+
+            .proxis-content-button {
+                font-family: $terminaMedium;
+                display: inline-block;
+                min-width: 170px;
+                text-align: center;
+                line-height: 40px;
+                margin: 20px auto;
+                color: $white;
+                border: 1px solid $white;
+                font-size: $fontSize10;
+
+                @include media-breakpoint-up(md) {
+                    margin: 75px auto;
+                    min-width: 240px;
+                    line-height: 60px;
+                    font-size: $fontSize15;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    margin: 50px auto;
+                    min-width: 200px;
+                    line-height: 45px;
+                    font-size: $fontSize12;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .proxis-content-feature {
+            position: absolute;
+            bottom: 15%;
+            width: 100%;
+            text-align: center;
+            color: $white;
+            font-family: $terminaDemi;
+
+            @include media-breakpoint-up(md) {
+                font-size: $fontSize24;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: $fontSize17;
+                letter-spacing: 3px;
+            }
+
+            .proxis-feature-img {
+                max-width: 60px;
+                margin: 15px auto;
+
+                @include media-breakpoint-up(md) {
+                    max-width: 140px;
+                    margin: 30px auto;
+                }
+            }
+        }
+    }
+
+    .proxis-section-2,
+    .proxis-section-3,
+    .proxis-section-4 {
+        overflow: hidden;
+        margin-top: -40px;
+
+        @include media-breakpoint-up(md) {
+            margin-top: -70px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: -8%;
+        }
+
+        .proxis-product-section {
+            position: absolute;
+            top: 0;
+            max-width: 100%;
+        }
+
+        .proxis-section-content {
+            position: absolute;
+            width: 100%;
+            top: 30%;
+            color: $white;
+            text-align: center;
+
+            .proxis-section-title {
+                font-family: $terminaMedium;
+                font-size: $fontSize16;
+
+                @include media-breakpoint-up(md) {
+                    font-size: $fontSize25;
+                }
+            }
+
+            .proxis-section-description {
+                font-family: $terminaRegular;
+                line-height: $fontSize18;
+                font-size: $fontSize12;
+                margin: 15px 0;
+                padding: 0 8%;
+
+                @include media-breakpoint-up(md) {
+                    margin: 40px auto;
+                    font-size: $fontSize17;
+                    line-height: $fontSize25;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    padding: 0 18%;
+                }
+            }
+        }
+
+        .proxis-content-feature {
+            position: absolute;
+            bottom: 15%;
+            width: 100%;
+            text-align: center;
+            color: $white;
+            font-family: $terminaDemi;
+            font-size: $fontSize13;
+
+            @include media-breakpoint-up(md) {
+                font-size: $fontSize24;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: $fontSize17;
+                letter-spacing: 3px;
+            }
+
+            .proxis-feature-img {
+                max-width: 70px;
+                margin: 20px auto;
+
+                @include media-breakpoint-up(md) {
+                    max-width: 140px;
+                    margin: 30px auto;
+                }
+            }
+        }
+    }
+
+    .proxis-section-2 {
+        z-index: 4;
+
+        .proxis-section-content {
+            @include media-breakpoint-up(lg) {
+                width: 55%;
+                right: 0;
+                top: 20%;
+            }
+
+            @include media-breakpoint-up(xml) {
+                width: 55%;
+            }
+        }
+
+        .proxis-product-section {
+            top: -28%;
+
+            @include media-breakpoint-up(lg) {
+                top: -60%;
+                max-width: 80%;
+                left: -10%;
+            }
+        }
+
+        .proxis-logo-section {
+            .proxis-logo-icon {
+                width: 90px;
+                height: 90px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background: $white;
+                font-family: $terminaMedium;
+                padding-top: 30px;
+                color: $black;
+                font-size: $fontSize17;
+                line-height: $fontSize20;
+
+                @include media-breakpoint-up(md) {
+                    width: 115px;
+                    height: 115px;
+                    padding-top: 40px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: $fontSize22;
+                }
+
+                span {
+                    display: block;
+                    font-size: $fontSize11;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: $fontSize13;
+                        line-height: $fontSize20;
+                    }
+                }
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: $fontSize11;
+
+                @include media-breakpoint-up(md) {
+                    font-size: $fontSize15;
+                    margin-top: 15px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: $fontSize14;
+                }
+            }
+        }
+    }
+
+    .proxis-section-3 {
+        z-index: 3;
+
+        .proxis-section-content {
+            @include media-breakpoint-up(lg) {
+                width: 55%;
+                left: 0;
+                top: 20%;
+            }
+
+            @include media-breakpoint-up(xml) {
+                width: 55%;
+            }
+        }
+
+        .proxis-product-section {
+            top: -8%;
+
+            @include media-breakpoint-up(lg) {
+                top: -4%;
+            }
+        }
+
+        .proxis-logo-section {
+            display: inline-block;
+            margin: 0 auto;
+            position: relative;
+            max-width: 90px;
+
+            @include media-breakpoint-up(md) {
+                max-width: 120px;
+            }
+
+            .section-3-logo {
+                width: 100%;
+            }
+
+            .proxis-logo-text {
+                position: absolute;
+                left: 50%;
+                top: 53%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: $black;
+                font-family: $terminaRegular;
+                max-width: 100%;
+                font-size: 7px;
+
+                @include media-breakpoint-up(md) {
+                    font-size: $fontSize10;
+                    top: 50%;
+                }
+            }
+        }
+
+        .proxis-content-feature {
+            .proxis-feature-img {
+                max-width: 60px;
+            }
+        }
+    }
+
+    .proxis-section-4 {
+        z-index: 2;
+        padding-top: 145px;
+        background: linear-gradient(174deg, $black 0%, rgba(60, 59, 61, 1) 70%, rgba(78, 77, 80, 1) 100%);
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 15vw;
+        }
+
+        .proxis-section-content {
+            position: relative;
+        }
+
+        .proxis-section-title {
+            margin-top: 35px;
+        }
+
+        .proxis-section-caculate {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 210px;
+
+            @include media-breakpoint-up(md) {
+                max-width: 300px;
+            }
+
+            .caculate-item {
+                float: left;
+                width: 80px;
+                font-family: $terminaRegular;
+                min-height: 80px;
+
+                @include media-breakpoint-up(md) {
+                    width: 100px;
+                }
+
+                .caculate-number {
+                    font-size: $fontSize25;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: $fontSize35;
+                    }
+                }
+
+                .caculate-text {
+                    font-size: 9px;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: $fontSize14;
+                    }
+                }
+
+                &.center {
+                    line-height: 50px;
+                    font-size: 35px;
+                    width: 50px;
+                }
+
+                &.right {
+                    line-height: 20px;
+                    padding-top: 10px;
+
+                    @include media-breakpoint-up(lg) {
+                        width: 150px;
+                        line-height: $fontSize40;
+                    }
+
+                    .caculate-text {
+                        line-height: $fontSize15;
+                    }
+                }
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        .section-img-box {
+            width: 100%;
+            min-height: 30vh;
+            position: relative;
+
+            @include media-breakpoint-up(md) {
+                min-height: 40vh;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            .title-section-image {
+                max-width: 70%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+            }
+        }
+
+        .proxis-4-content {
+            padding-bottom: 75px;
+
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+                float: right;
+            }
+        }
+    }
+
+    .proxis-section-video {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        margin-top: -5px;
+
+        .layer-video-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        iframe {
+            z-index: 1;
+            position: relative;
+            width: 100%;
+            height: 180vw;
+            background: $black;
+
+            @include media-breakpoint-up(md) {
+                height: 56vw;
+            }
+        }
+    }
+
+    .spacing {
+        background: $black;
+        display: block;
+        width: 100%;
+        height: 100px;
+    }
+
+    .proxis-section-cover {
+        background: $white;
+        padding-bottom: 70px;
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 170px;
+        }
+    }
+
+    .proxis-section-explain {
+        background: linear-gradient(174deg, $black 0%, rgba(60, 59, 61, 1) 70%, rgba(78, 77, 80, 1) 100%);
+        color: $white;
+        padding: 30px;
+        padding-bottom: 400px;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 85vh;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 590px;
+        }
+
+        .wecare-service {
+            padding: 30px 20px;
+            border: 1px solid $white;
+            border-radius: 20px;
+            text-align: center;
+
+            &.personalize {
+                margin-top: 50px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 50px;
+                width: 48%;
+                margin-left: 1%;
+                margin-right: 1%;
+                padding: 75px 85px;
+            }
+        }
+
+        .icon-service {
+            float: left;
+
+            .img-service {
+                max-width: 60px;
+
+                @include media-breakpoint-up(lg) {
+                    max-width: 70px;
+                }
+            }
+        }
+
+        .service-title {
+            float: left;
+            font-family: $terminaMedium;
+            margin-left: 15px;
+            padding-top: 13px;
+            text-align: left;
+
+            span {
+                display: block;
+
+                &.brand-title {
+                    font-size: $fontSize12;
+                }
+
+                &.title-main-text {
+                    font-size: $fontSize15;
+
+                    @include media-breakpoint-up(xl) {
+                        font-size: $fontSize18;
+                    }
+                }
+            }
+        }
+
+        .service-description {
+            font-family: $terminaRegular;
+            font-size: 7px;
+            line-height: 10px;
+            padding-left: 25%;
+            text-align: left;
+            min-height: 30px;
+
+            @include media-breakpoint-up(md) {
+                font-size: $fontSize12;
+                line-height: $fontSize15;
+            }
+
+            @include media-breakpoint-up(lg) {
+                min-height: 45px;
+                font-size: $fontSize10;
+            }
+        }
+
+        .tab-button {
+            color: $white;
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            font-weight: 500;
+            border: 1px solid $white;
+            font-size: $fontSize10;
+            background: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .trigger-tab-content {
+            display: none;
+        }
+
+        .trigger-tab-content {
+            padding-top: 15px;
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 40px;
+            }
+
+            .service-title-box {
+                position: relative;
+                text-align: center;
+                padding-bottom: 15px;
+                margin-bottom: 25px;
+                border-bottom: 1px solid $white;
+            }
+
+            .service-title {
+                display: inline-block;
+                float: none;
+            }
+
+            .up-icon {
+                max-width: 35px;
+                position: absolute;
+                top: 35%;
+                right: 0;
+            }
+
+            .tab-content-text {
+                font-family: $terminaRegular;
+                font-size: $fontSize12;
+                line-height: $fontSize17;
+
+                @include media-breakpoint-up(lg) {
+                    width: 80%;
+                    margin: 0 auto;
+                    font-size: $fontSize15;
+                    line-height: $fontSize25;
+                    max-width: 1050px;
+                }
+            }
+
+            .tab-content-main-text {
+                @include media-breakpoint-up(lg) {
+                    width: 45%;
+                    float: left;
+                    margin-top: 40px;
+                    padding-right: 40px;
+
+                    &.we-care-text-content {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .we-care-mini-list {
+                margin: 25px 0 45px;
+                padding-left: 15px;
+                font-family: $terminaMedium;
+                font-size: $fontSize12;
+
+                @include media-breakpoint-up(lg) {
+                    width: 50%;
+                    float: left;
+                    font-size: $fontSize14;
+
+                    p {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                .mini-list-icon {
+                    max-width: 35px;
+                    margin-right: 15px;
+                    display: inline-block;
+
+                    &.mini-list-icon-3 {
+                        float: left;
+                    }
+                }
+
+                .mini-list-text {
+                    display: inline-block;
+
+                    &.mini-list-text-3 {
+                        @include media-breakpoint-up(lg) {
+                            line-height: 36px;
+                        }
+                    }
+                }
+            }
+
+            .tab-content-support-text {
+                font-family: $terminaMedium;
+                font-size: $fontSize10;
+                text-align: center;
+                margin-top: 40px;
+                letter-spacing: 1px;
+
+                .proxis-contact-box {
+                    font-weight: 200;
+                    margin-top: 15px;
+                }
+            }
+
+            .contact-item {
+                display: inline-block;
+                width: 75px;
+                text-align: center;
+                border: 1px solid $white;
+                border-radius: 5px;
+                padding-top: 3px;
+                margin: 0 5px;
+
+                @include media-breakpoint-up(lg) {
+                    width: 80px;
+                }
+
+                span {
+                    display: block;
+                    font-size: $fontSize13;
+                    color: $white;
+                }
+
+                .contact-img {
+                    display: inline-block;
+                    max-height: 30px;
+                    width: auto;
+                }
+            }
+
+            .start-box {
+                text-align: center;
+            }
+
+            .personalize-img-box {
+                text-align: center;
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                @include media-breakpoint-up(lg) {
+                    width: 40%;
+                    float: right;
+                    margin-top: 0;
+                }
+
+                .personalize-img {
+                    max-width: 80%;
+                    display: inline-block;
+                }
+            }
+
+            .personalize-content-main {
+                @include media-breakpoint-up(lg) {
+                    padding-top: 25px;
+                }
+            }
+        }
+
+        .campaign-product-feature {
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+
+            @include media-breakpoint-up(lg) {
+                width: 100%;
+                left: 50%;
+                max-width: 855px;
+                bottom: -75px;
+
+                @include translateX(-50%);
+            }
+
+            .feature-image-box {
+                position: relative;
+            }
+
+            .feature-text {
+                font-weight: 500;
+                color: $white;
+                position: absolute;
+                left: 56%;
+                font-size: $fontSize10;
+
+                @include media-breakpoint-up(lg) {
+                    left: 58%;
+                    font-size: $fontSize12;
+                }
+
+                &.feature-text-1 {
+                    top: 1.5%;
+                }
+
+                &.feature-text-2 {
+                    top: 19.5%;
+                }
+
+                &.feature-text-3 {
+                    top: 46.5%;
+                }
+
+                &.feature-text-4 {
+                    top: 52.7%;
+                }
+
+                &.feature-text-6 {
+                    top: 95.5%;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .proxis-collection {
+        background: $white;
+        position: relative;
+
+        .background-layer {
+            background: linear-gradient(174deg, $black 0%, rgba(60, 59, 61, 1) 70%, rgba(78, 77, 80, 1) 100%);
+            height: 70%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .owl-carousel {
+            @include media-breakpoint-up(lg) {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        .collection-content {
+            z-index: 2;
+            color: $white;
+            text-align: center;
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+
+            .collection-item {
+                @include media-breakpoint-up(xl) {
+                    width: calc(100% / 3);
+                    float: left;
+                }
+            }
+
+            .proxis-collection-section-title {
+                font-family: $terminaDemi;
+                padding-top: 60px;
+                padding-bottom: 5px;
+                font-size: $fontSize16;
+
+                @include media-breakpoint-up(xl) {
+                    font-size: $fontSize20;
+                }
+            }
+
+            .proxis-collection-section-description {
+                font-family: $terminaRegular;
+                padding-bottom: 70px;
+
+                @include media-breakpoint-up(xl) {
+                    font-size: $fontSize18;
+                }
+            }
+
+            .proxis-collection-title {
+                font-family: $terminaBold;
+                padding-bottom: 15px;
+            }
+
+            .proxis-collection-size {
+                font-family: $terminaBold;
+                color: $black;
+                line-height: 30px;
+                font-size: $fontSize14;
+            }
+
+            .proxis-collection-price {
+                font-family: $terminaLight;
+                color: $black;
+                font-size: $fontSize18;
+                margin-top: 20px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    .sub-black-section {
+        background: $black;
+        min-height: 25vh;
+        display: block;
+        margin-top: 30px;
+
+        @include media-breakpoint-up(lg) {
+            background: linear-gradient(174deg, $black 0%, rgba(60, 59, 61, 1) 70%, rgba(78, 77, 80, 1) 100%);
+        }
+    }
+
+    .white-line {
+        height: 1px;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid $white;
+        margin-top: 25px;
+    }
+
+    .explain-button-box {
+        width: 95%;
+        margin: 0 auto;
+        display: block;
+        max-width: 1050px;
+        display: flex;
+
+        @include media-breakpoint-up(xl) {
+            width: 80%;
+        }
+    }
+
+    .proxis-navigator {
+        width: 100%;
+        background: $black;
+        position: fixed;
+        top: 80px;
+        z-index: 10;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 30px;
+
+        @include media-breakpoint-up(md) {
+            top: 90px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            top: 105px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            top: 135px;
+        }
+
+        .sticky-header & {
+            @include media-breakpoint-up(md) {
+                top: 90px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                top: 38px;
+            }
+        }
+
+        .proxis-navigator-button-list {
+            width: 100%;
+            border-bottom: 1px solid $white;
+            text-align: right;
+
+            @include media-breakpoint-up(xl) {
+                padding: 0 5%;
+            }
+        }
+
+        .tab-button {
+            display: inline-block;
+            font-weight: 500;
+            font-size: $fontSize11;
+            margin: 0 15px;
+        }
+
+        .shopnow-menu {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            color: $black;
+            min-width: 100px;
+            text-align: center;
+            font-weight: 500;
+            font-size: $fontSize11;
+            background: $white;
+            margin-left: 15px;
+
+            @include media-breakpoint-up(lg) {
+                margin: 0 15px;
+                min-width: 120px;
+            }
+        }
+
+        .select-navigator-box {
+            position: relative;
+
+            .navigator-icon {
+                display: inline-block;
+                max-height: 20px;
+                width: auto;
+
+                @include transform(rotate(180deg));
+            }
+
+            .option-list-navigator {
+                display: none;
+                position: absolute;
+                top: calc(100% + 18px);
+                min-width: 155px;
+                line-height: 30px;
+                background: $black;
+
+                .option-item {
+                    font-weight: 500;
+                    font-size: $fontSize11;
+                    line-height: 30px;
+                    border-bottom: 1px solid $white;
+                    width: 100%;
+                    text-align: left;
+                    margin: 0;
+                    padding: 0 10px;
+                }
+            }
+
+            &:hover {
+                .option-list-navigator {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .proxis-owl-carousel {
+        position: relative;
+        background: $black;
+        z-index: 2;
+        margin-top: -5px;
+    }
+}

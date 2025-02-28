@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'SamsoniteSans-Expanded';
+    src:
+        url('../fonts/SamsoniteSans-Expanded.woff2') format('woff2'),
+        url('../fonts/SamsoniteSans-Expanded.woff') format('woff'),
+        url('../fonts/SamsoniteSans-Expanded.ttf')  format('truetype'),
+        url('../fonts/SamsoniteSans-Expanded.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SamsoniteSans';
+    src:
+        url('../fonts/SamsoniteSans.woff2') format('woff2'),
+        url('../fonts/SamsoniteSans.woff') format('woff'),
+        url('../fonts/SamsoniteSans.ttf')  format('truetype'),
+        url('../fonts/SamsoniteSans.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Termina-Bold';
+    src:
+        url('../fonts/Termina-Bold.woff2') format('woff2'),
+        url('../fonts/Termina-Bold.woff') format('woff'),
+        url('../fonts/Termina-Bold.ttf')  format('truetype'),
+        url('../fonts/Termina-Bold.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Termina-Demi';
+    src:
+        url('../fonts/Termina-Demi.woff2') format('woff2'),
+        url('../fonts/Termina-Demi.woff') format('woff'),
+        url('../fonts/Termina-Demi.ttf')  format('truetype'),
+        url('../fonts/Termina-Demi.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Termina-Light';
+    src:
+        url('../fonts/Termina-Light.woff2') format('woff2'),
+        url('../fonts/Termina-Light.woff') format('woff'),
+        url('../fonts/Termina-Light.ttf')  format('truetype'),
+        url('../fonts/Termina-Light.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Termina-Medium';
+    src:
+        url('../fonts/Termina-Medium.woff2') format('woff2'),
+        url('../fonts/Termina-Medium.woff') format('woff'),
+        url('../fonts/Termina-Medium.ttf')  format('truetype'),
+        url('../fonts/Termina-Medium.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Termina-Regular';
+    src:
+        url('../fonts/Termina-Regular.woff2') format('woff2'),
+        url('../fonts/Termina-Regular.woff') format('woff'),
+        url('../fonts/Termina-Regular.ttf')  format('truetype'),
+        url('../fonts/Termina-Regular.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RainerTestv04-Regular';
+    src:
+        url('../fonts/RainerTestv04-Regular.eot') format('eot'),
+        url('../fonts/RainerTestv04-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RainerTestv04-Regular.svg#RainerTestv04-Regular') format('svg'),
+        url('../fonts/RainerTestv04-Regular.ttf') format('truetype'),
+        url('../fonts/RainerTestv04-Regular.woff') format('woff'),
+        url('../fonts/RainerTestv04-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RainerTestv04-Medium';
+    src:
+        url('../fonts/RainerTestv04-Medium.eot') format('eot'),
+        url('../fonts/RainerTestv04-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RainerTestv04-Medium.svg#RainerTestv04-Medium') format('svg'),
+        url('../fonts/RainerTestv04-Medium.ttf') format('truetype'),
+        url('../fonts/RainerTestv04-Medium.woff') format('woff'),
+        url('../fonts/RainerTestv04-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxon-Regular';
+    src:
+        url('../fonts/PROXONRegular.eot') format('eot'),
+        url('../fonts/PROXONRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PROXONRegular.svg#PROXONRegular') format('svg'),
+        url('../fonts/PROXONRegular.ttf') format('truetype'),
+        url('../fonts/PROXONRegular.woff') format('woff'),
+        url('../fonts/PROXONRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src:
+        url('../fonts/Gilroy-Light.eot') format('eot'),
+        url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Light.svg#Gilroy-Light') format('svg'),
+        url('../fonts/Gilroy-Light.ttf') format('truetype'),
+        url('../fonts/Gilroy-Light.woff') format('woff'),
+        url('../fonts/Gilroy-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src:
+        url('../fonts/Gilroy-ExtraBold.eot') format('eot'),
+        url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-ExtraBold.svg#Gilroy-ExtraBold') format('svg'),
+        url('../fonts/Gilroy-ExtraBold.ttf') format('truetype'),
+        url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+        url('../fonts/Gilroy-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DIN-BoldAlternate';
+    src:
+        url('../fonts/DIN-BoldAlternate.eot') format('eot'),
+        url('../fonts/DIN-BoldAlternate.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DIN-BoldAlternate.svg#DIN-BoldAlternate') format('svg'),
+        url('../fonts/DIN-BoldAlternate.ttf') format('truetype'),
+        url('../fonts/DIN-BoldAlternate.woff') format('woff'),
+        url('../fonts/DIN-BoldAlternate.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GoboldHigh';
+    src:
+        url('../fonts/GoboldHigh.eot') format('eot'),
+        url('../fonts/GoboldHigh.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GoboldHigh.svg#GoboldHigh') format('svg'),
+        url('../fonts/GoboldHigh.ttf') format('truetype'),
+        url('../fonts/GoboldHigh.woff') format('woff'),
+        url('../fonts/GoboldHigh.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '#{$gtAmerica}';
+    src:
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Ultra-Light.ttf') format('truetype'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Ultra-Light.woff') format('woff'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Ultra-Light.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '#{$gtAmerica}';
+    src:
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Light.ttf') format('truetype'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Light.woff') format('woff'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Light.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '#{$gtAmerica}';
+    src:
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Regular.ttf') format('truetype'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Regular.woff') format('woff'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '#{$gtAmerica}';
+    src:
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Medium.ttf') format('truetype'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Medium.woff') format('woff'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '#{$gtAmerica}';
+    src:
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Bold.ttf') format('truetype'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Bold.woff') format('woff'),
+        url('#{$gtAmericaFontPath}/Standard/#{$gtAmerica}-Standard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT-America-Extended';
+    src:
+        url('../fonts/GTAmerica/Extended/GT-America-Extended-Regular.ttf') format('truetype'),
+        url('../fonts/GTAmerica/Extended/GT-America-Extended-Regular.woff') format('woff'),
+        url('../fonts/GTAmerica/Extended/GT-America-Extended-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,94 @@
+.double-eleven-support {
+    .content {
+        top: 5%;
+        color: $black;
+        width: 80%;
+        left: 50%;
+
+        @include transform(translateX(-50%));
+
+        @include media-breakpoint-up(md) {
+            top: 20%;
+        }
+    }
+
+    .support-item {
+        border-bottom: 2px solid $black;
+        padding: 10% 5%;
+
+        @include media-breakpoint-up(md) {
+            border-bottom: none;
+            border-right: 2px solid $black;
+            padding: 3% 5% 0;
+        }
+
+        &:last-child {
+            border-bottom: none;
+
+            @include media-breakpoint-up(md) {
+                border-right: none;
+            }
+        }
+
+        .title {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 5vw;
+            letter-spacing: 0.05rem;
+            padding-bottom: 20px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.2vw;
+            }
+        }
+
+        .icon-img {
+            @include media-breakpoint-up(md) {
+                max-height: 25%;
+                max-width: 30%;
+            }
+
+            &.shipping-icon {
+                width: 25%;
+
+                @include media-breakpoint-up(md) {
+                    width: auto;
+                }
+            }
+
+            &.return-exchange-icon {
+                width: 18%;
+
+                @include media-breakpoint-up(md) {
+                    width: auto;
+                }
+            }
+
+            &.warranty-icon {
+                width: 15%;
+
+                @include media-breakpoint-up(md) {
+                    width: auto;
+                }
+            }
+        }
+
+        .info-content {
+            font-weight: 500;
+            font-size: 3vw;
+            padding-top: 8%;
+
+            @include media-breakpoint-up(md) {
+                font-size: 0.8vw;
+            }
+        }
+
+        &:first-child {
+            .info-content {
+                @include media-breakpoint-up(md) {
+                    padding-top: 14%;
+                }
+            }
+        }
+    }
+}

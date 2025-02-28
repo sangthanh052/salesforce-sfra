@@ -1,0 +1,324 @@
+.double-eleven-flash-deals {
+    .content {
+        top: 2%;
+        width: 57%;
+        left: 50%;
+
+        @include transform(translateX(-50%));
+
+        @include media-breakpoint-up(md) {
+            width: 65%;
+        }
+
+        .title-section {
+            @include media-breakpoint-up(md) {
+                width: 31%;
+                float: left;
+                margin-top: 3%;
+            }
+
+            .title {
+                font-family: $rainerMedium;
+                font-size: 14vw;
+                margin-top: -5vw;
+                margin-bottom: -2vw;
+                text-shadow: 0 2px 3px $lightPurple;
+
+                @supports (-webkit-touch-callout: none) {
+                    margin-top: -3.5vw;
+                    margin-bottom: -3vw;
+                }
+
+                @include media-breakpoint-up(md) {
+                    font-size: 5vw;
+                    margin-top: -1.75vw;
+                    margin-bottom: -0.75vw;
+
+                    @supports (-webkit-touch-callout: none) {
+                        margin-top: -1vw;
+                        margin-bottom: -1vw;
+                    }
+                }
+            }
+        }
+
+        .product-section {
+            font-family: $rainerMedium;
+            line-height: 0.9;
+            letter-spacing: 2px;
+            margin: 12% auto;
+
+            @include media-breakpoint-up(md) {
+                float: right;
+                width: 65%;
+                padding-top: 5%;
+                margin: 0;
+            }
+
+            .sale-text {
+                font-size: 20vw;
+                line-height: 0.8;
+                text-align: left;
+                text-shadow: 0 0 10px $lightPurple, 0 0 20px $lightPurple, 0 0 30px $lightPurple;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 16vw;
+                    display: flex;
+                    align-items: center;
+                    margin-top: -5%;
+
+                    @supports (-webkit-touch-callout: none) {
+                        margin-top: 0;
+                    }
+                }
+
+                p {
+                    white-space: nowrap;
+                    margin: 0;
+                }
+
+                .text-content {
+                    font-size: 27vw;
+                    display: block;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 16vw;
+                    }
+                }
+
+                .percent-letter {
+                    font-family: $goBoldHigh;
+                    font-size: 16.5vw;
+                    margin-left: -2vw;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 13vw;
+                        margin-right: 1.5vw;
+                    }
+                }
+            }
+        }
+
+        .info-section {
+            padding: 6% 0;
+
+            @include media-breakpoint-up(md) {
+                width: 31%;
+                padding: 18% 0;
+            }
+        }
+
+        .title {
+            text-transform: uppercase;
+        }
+
+        .main-product {
+            padding: 0 18px;
+
+            .product-image {
+                img {
+                    @include scale(1.4);
+                }
+            }
+
+            .sale-text {
+                padding-left: 7%;
+            }
+        }
+
+        .countdown {
+            color: $black;
+            font-family: $proxonRegular;
+            font-size: 13vw;
+
+            @include media-breakpoint-up(md) {
+                font-size: 4vw;
+            }
+
+            &.time-out {
+                display: none;
+            }
+
+            .colon-letter {
+                margin: 0 -3vw;
+
+                @include media-breakpoint-up(md) {
+                    margin: 0 -1vw;
+                }
+            }
+        }
+
+        &.coming-soon-section {
+            .title-section {
+                @include media-breakpoint-up(md) {
+                    width: 50%;
+                    float: none;
+                    margin: 0 auto;
+                }
+
+                .title {
+                    @include media-breakpoint-up(md) {
+                        font-size: 8vw;
+                    }
+                }
+            }
+
+            .main-content {
+                position: relative;
+
+                .coming-soon {
+                    font-weight: 700;
+                    text-shadow: 0 0 10px $lightPurple, 0 0 20px $lightPurple, 0 0 20px $lightPurple;
+                    position: absolute;
+                    font-size: 8vw;
+                    padding-top: 18vw;
+                    left: 50%;
+
+                    @include transform(translateX(-50%));
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 3.5vw;
+                        padding-top: 0;
+                    }
+
+                    span {
+                        display: block;
+                        white-space: nowrap;
+                        padding-bottom: 10vw;
+
+                        @include media-breakpoint-up(md) {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-name {
+            font-weight: 700;
+            font-size: 5vw;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            margin: 0;
+
+            @include media-breakpoint-up(md) {
+                font-size: 2vw;
+                margin: 5% auto;
+            }
+        }
+
+        .product-info {
+            font-weight: 400;
+            font-size: 3vw;
+            padding: 4% 0;
+            margin: 0;
+
+            @include media-breakpoint-up(md) {
+                font-size: 0.9vw;
+                padding: 2% 0;
+            }
+
+            @include media-breakpoint-up(xl) {
+                font-size: 0.9vw;
+                padding: 5% 0;
+            }
+        }
+
+        .product-price {
+            font-weight: 700;
+
+            .regular-price {
+                position: absolute;
+                left: 9%;
+                font-size: 3vw;
+                margin-top: 1%;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 0.8vw;
+                    left: 5%;
+                    margin-top: 0.4%;
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 0.12em;
+                    width: 115%;
+                    background-color: $white;
+                    top: 50%;
+                    left: -4px;
+
+                    @include transform(rotate(5deg));
+                }
+            }
+
+            .sale-price {
+                font-size: 6vw;
+                text-shadow: 0 0 10px $lightPurple, 0 0 20px $lightPurple, 0 0 30px $lightPurple;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        .shop-now-section {
+            font-weight: 700;
+            width: 60%;
+            margin: 5% auto;
+            background-color: $white;
+
+            @include border-radius(0.5rem);
+
+            @include media-breakpoint-up(md) {
+                width: 40%;
+            }
+
+            .shop-now-btn {
+                color: darken(saturate(adjust-hue($lightShadeMagenta, -19), 37.5), 14.31);
+
+                @include media-breakpoint-up(md) {
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+
+    .sold-out-section {
+        .title-section,
+        .main-product,
+        .info-section {
+            @include opacity(0.5);
+        }
+
+        .countdown {
+            &.sale-time {
+                display: none;
+            }
+
+            &.time-out {
+                display: block;
+            }
+        }
+
+        .product-section {
+            @include media-breakpoint-up(md) {
+                padding-top: 2%;
+            }
+        }
+
+        .sold-out {
+            display: block !important;
+            position: absolute;
+            z-index: 1;
+            margin-left: -22%;
+            width: 144%;
+
+            @include media-breakpoint-up(md) {
+                margin-left: 0;
+                width: auto;
+            }
+        }
+    }
+}

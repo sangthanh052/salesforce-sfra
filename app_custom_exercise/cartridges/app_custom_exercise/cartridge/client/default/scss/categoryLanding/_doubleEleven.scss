@@ -1,0 +1,31 @@
+$rainerRegular: 'RainerTestv04-Regular';
+$rainerMedium: 'RainerTestv04-Medium';
+$proxonRegular: 'Proxon-Regular';
+$gilroyLight: 'Gilroy-Light';
+$gilroyExtraBold: 'Gilroy-ExtraBold';
+$dinBoldAlternate: 'DIN-BoldAlternate';
+$goBoldHigh: 'GoboldHigh';
+$lightPurple: lighten(adjust-hue($blue, 32), 38.82);
+
+@import './doubleEleven/doubleElevenBanner';
+@import './doubleEleven/doubleElevenFlashDeals';
+@import './doubleEleven/doubleElevenSummaryOffer';
+@import './doubleEleven/doubleElevenAddOnOffer';
+@import './doubleEleven/doubleElevenLuckyDrawGame';
+@import './doubleEleven/doubleElevenSpecialDeals';
+@import './doubleEleven/doubleElevenSupport';
+@import './doubleEleven/doubleElevenFAQ';
+@import './doubleEleven/doubleElevenGameResult';
+@import './doubleEleven/doubleElevenShareEmail';
+
+.btn-close-popup {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 1;
+
+    &:focus {
+        outline: none;
+    }
+}

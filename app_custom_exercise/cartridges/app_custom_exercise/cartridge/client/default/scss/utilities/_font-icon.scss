@@ -1,0 +1,324 @@
+@import "font-variables";
+
+@font-face {
+    font-family: "#{$sa-font-family}";
+    src: url("#{$sa-font-path}/#{$sa-font-family}.eot?bqwedk");
+    src:
+        url("#{$sa-font-path}/#{$sa-font-family}.woff2?bqwedk") format("woff2"),
+        url("#{$sa-font-path}/#{$sa-font-family}.woff?bqwedk") format("woff"),
+        url("#{$sa-font-path}/#{$sa-font-family}.ttf?bqwedk") format("truetype"),
+        url("#{$sa-font-path}/#{$sa-font-family}.eot?bqwedk#iefix") format("embedded-opentype"),
+        url("#{$sa-font-path}/#{$sa-font-family}.svg?bqwedk##{$sa-font-family}") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+[class^="sa-icon"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "#{$sa-font-family}" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ico-apply {
+    &::before {
+        content: $icon-ico-apply;
+    }
+}
+
+.icon-ico-arrow-bottom {
+    &::before {
+        content: $icon-ico-arrow-bottom;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-arrow-left {
+    &::before {
+        content: $icon-ico-arrow-left;
+    }
+}
+
+.icon-ico-arrow-right {
+    &::before {
+        content: $icon-ico-arrow-right;
+    }
+}
+
+.icon-ico-arrow-right-white-circle {
+    &::before {
+        content: $icon-ico-arrow-right-white-circle;
+    }
+}
+
+.icon-ico-arrow-top-circle {
+    &::before {
+        content: $icon-ico-arrow-top-circle;
+    }
+}
+
+.icon-ico-bag {
+    &::before {
+        content: $icon-ico-bag;
+    }
+}
+
+.icon-ico-close {
+    &::before {
+        content: $icon-ico-close;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-close-search {
+    &::before {
+        content: $icon-ico-close-search;
+        color: #e2e2e2;
+    }
+}
+
+.icon-ico-close-thin {
+    &::before {
+        content: $icon-ico-close-thin;
+    }
+}
+
+.icon-ico-delivery {
+    &::before {
+        content: $icon-ico-delivery;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-filter {
+    &::before {
+        content: $icon-ico-filter;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-full-collection {
+    &::before {
+        content: $icon-ico-full-collection;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-gifting {
+    &::before {
+        content: $icon-ico-gifting;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-logo {
+    &::before {
+        content: $icon-ico-logo;
+    }
+}
+
+.icon-ico-menu-bar {
+    &::before {
+        content: $icon-ico-menu-bar;
+    }
+}
+
+.icon-ico-network {
+    &::before {
+        content: $icon-ico-network;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-office-site {
+    &::before {
+        content: $icon-ico-office-site;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-peoples {
+    &::before {
+        content: $icon-ico-peoples;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-personal-service {
+    &::before {
+        content: $icon-ico-personal-service;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-search {
+    &::before {
+        content: $icon-ico-search;
+    }
+}
+
+.icon-ico-secure-payment {
+    &::before {
+        content: $icon-ico-secure-payment;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-sort-asc {
+    &::before {
+        content: $icon-ico-sort-asc;
+    }
+}
+
+.icon-ico-sort-desc {
+    &::before {
+        content: $icon-ico-sort-desc;
+    }
+}
+
+.icon-ico-star {
+    &::before {
+        content: $icon-ico-star;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-license {
+    &::before {
+        content: $icon-ico-license;
+        color: #004b8d;
+    }
+}
+
+.icon-ico-address-tag {
+    &::before {
+        content: $icon-ico-address-tag;
+    }
+}
+
+.icon-ico-deliver {
+    &::before {
+        content: $icon-ico-deliver;
+    }
+}
+
+.icon-ico-tsa-lock {
+    &::before {
+        content: $icon-ico-tsa-lock;
+    }
+}
+
+.icon-ico-samsonite {
+    &::before {
+        content: $icon-ico-samsonite;
+    }
+}
+
+.icon-ico-user {
+    &::before {
+        content: $icon-ico-user;
+        color: #00458f;
+    }
+}
+
+.icon-ico-people {
+    &::before {
+        content: $icon-ico-people;
+    }
+}
+
+.icon-ico-orders {
+    &::before {
+        content: $icon-ico-orders;
+    }
+}
+
+.icon-ico-my-profile {
+    &::before {
+        content: $icon-ico-my-profile;
+    }
+}
+
+.icon-ico-address-book {
+    &::before {
+        content: $icon-ico-address-book;
+    }
+}
+
+.icon-ico-magnify-glass {
+    &::before {
+        content: $icon-ico-magnify-glass;
+    }
+}
+
+.icon-ico-info {
+    &::before {
+        content: $icon-ico-info;
+    }
+}
+
+.icon-ico-long-arrow-up {
+    &::before {
+        content: $icon-ico-long-arrow-up;
+    }
+}
+
+.icon-ico-location {
+    &::before {
+        content: $icon-ico-location;
+        color: #084b8b;
+    }
+}
+
+.icon-ico-line-brands {
+    &::before {
+        content: $icon-ico-line-brands;
+    }
+}
+
+.icon-ico-cart {
+    &::before {
+        content: $icon-ico-cart;
+    }
+}
+
+.icon-ico-arrow-down {
+    &::before {
+        content: $icon-ico-arrow-down;
+    }
+}
+
+.icon-ico-loyalty {
+    &::before {
+        content: $icon-ico-loyalty;
+    }
+}
+
+.icon-ico-tracking {
+    &::before {
+        content: $icon-ico-tracking;
+    }
+}
+
+.icon-ico-facebook {
+    &::before {
+        content: $icon-ico-facebook;
+        color: #3f579d;
+    }
+}
+
+.icon-ico-currency {
+    &::before {
+        content: $icon-ico-currency;
+        color: #3f579d;
+    }
+}

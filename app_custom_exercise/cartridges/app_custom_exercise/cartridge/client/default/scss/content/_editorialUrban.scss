@@ -1,0 +1,297 @@
+@keyframes aniFadeInContent {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes aniFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ute-main {
+    opacity: 0;
+}
+
+.ssn-body {
+    .ute-main {
+        overflow: hidden;
+        opacity: 1;
+        background-color: $black;
+        font-size: 14px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 14px;
+        }
+
+        h3,
+        h2 {
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 2rem;
+            }
+        }
+
+        p,
+        span {
+            font-weight: 200;
+            line-height: 25px;
+        }
+
+        .ssn-section {
+            .btn {
+                &.btn-shop-now {
+                    border: 2px solid $lightGrayishBlue;
+                }
+            }
+        }
+    }
+}
+
+.ssn-body {
+    .ute-main {
+        .ssn-section {
+            display: block;
+
+            .ute-content {
+                color: $white;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .btn-shop-now {
+                font-weight: 700;
+            }
+
+            .ute-bg {
+                position: relative;
+
+                .ute-bg-text {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+
+                    .ute-text-wrap {
+                        position: absolute;
+                        top: 0;
+                        left: -12%;
+                        width: 70vh;
+                        height: 100%;
+                        white-space: nowrap;
+
+                        @include transform(rotate(-90deg));
+
+                        @include media-breakpoint-up(lg) {
+                            left: -20%;
+                            width: 90vh;
+                        }
+
+                        .ute-text {
+                            position: absolute;
+                            right: 0;
+                            width: 120%;
+
+                            @include media-breakpoint-up(xl) {
+                                width: 135%;
+                            }
+
+                            @include media-breakpoint-up(xxl) {
+                                width: 140%;
+                            }
+
+                            @include media-breakpoint-up(fhd) {
+                                width: 114%;
+                            }
+
+                            span {
+                                display: block;
+                                font-size: 33px;
+                                line-height: 1;
+
+                                @include media-breakpoint-up(lg) {
+                                    font-size: 55px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ute-section-1 {
+            position: relative;
+            margin-bottom: 15vh;
+
+            .ute-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .ute-content {
+                img {
+                    height: auto;
+                }
+            }
+        }
+
+        .ute-section-2,
+        .ute-section-4 {
+            .ute-bg {
+                .ute-bg-text {
+                    .ute-text-wrap {
+                        .ute-text {
+                            bottom: 10%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ute-section-3 {
+            .ute-bg {
+                .ute-bg-text {
+                    .ute-text-wrap {
+                        @include media-breakpoint-up(lg) {
+                            left: 0;
+                        }
+
+                        .ute-text {
+                            top: 10%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ute-section-2,
+        .ute-section-3,
+        .ute-section-4 {
+            padding-bottom: 25vh;
+
+            .ute-des {
+                .ute-list-bag {
+                    @include media-breakpoint-up(lg) {
+                        padding-bottom: 3rem;
+                    }
+                }
+            }
+
+            .ute-bg {
+                .text-center {
+                    width: 100%;
+                    display: block;
+                    font-size: 0;
+                    padding-top: 3vh;
+                    padding-bottom: 3vh;
+
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        background-color: $white;
+                        width: 20vh;
+                        height: 1px;
+                        line-height: 1;
+                        margin-bottom: 2%;
+                    }
+                }
+            }
+        }
+
+        .ute-section-1 {
+            position: relative;
+
+            &.has-animation {
+                .ute-bg,
+                .ute-content {
+                    opacity: 0;
+                }
+            }
+
+            &.load-animation {
+                .ute-bg {
+                    @include animation(aniFadeIn 1s ease-in-out);
+                }
+
+                .ute-content {
+                    @include animation(aniFadeInContent 2s ease-in-out);
+                }
+
+                .ute-bg,
+                .ute-content {
+                    opacity: 1;
+                }
+            }
+
+            .ute-bottom {
+                position: absolute;
+                bottom: 8vh;
+                width: 100%;
+
+                .ute-arrow {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    height: 20vh;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                    background-color: transparent;
+                    border: 0;
+
+                    &::before {
+                        content: "";
+                        position: relative;
+                        left: 0;
+                        display: block;
+                        width: 1px;
+                        height: 100%;
+                        background-color: $white;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    img {
+                        display: block;
+                        position: relative;
+                        left: -16px;
+                        top: -14px;
+                    }
+                }
+            }
+        }
+
+        .ssn-section-mob {
+            padding-top: 15vh;
+        }
+    }
+}

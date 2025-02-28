@@ -1,0 +1,297 @@
+.section-header.new-header {
+    .header-banner {
+        .language-selection-block {
+            padding-top: 0;
+        }
+    }
+
+    .main-menu {
+        border-top: none !important;
+        padding-right: 0;
+
+        @include media-breakpoint-up(xl) {
+            margin-top: 0 !important;
+            padding-right: 15px;
+        }
+
+        .navbar {
+            .nav-item {
+                > .nav-link {
+                    @include media-breakpoint-up(xl) {
+                        padding-top: 23px;
+                        padding-bottom: 23px;
+                        font-size: $fontSize11;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: $fontSize12;
+                    }
+                }
+
+                > .dropdown-menu::before {
+                    @include media-breakpoint-up(xl) {
+                        left: 0 !important;
+                        width: 150vw;
+                    }
+                }
+            }
+        }
+
+        .container-fluid {
+            @include media-breakpoint-up(xl) {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+        }
+    }
+
+    .header-content {
+        @include media-breakpoint-up(xl) {
+            padding-top: 0;
+        }
+
+        .navbar-header {
+            @include media-breakpoint-up(xl) {
+                justify-content: space-between;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                justify-content: flex-start;
+            }
+
+            &.clearfix {
+                &::after {
+                    @include media-breakpoint-up(xl) {
+                        display: none;
+                    }
+                }
+            }
+
+            .main-logo-wrapper {
+                @include media-breakpoint-up(fhd) {
+                    @include flex(8.33%);
+                }
+            }
+
+            .icon-ico-search {
+                @include media-breakpoint-up(md) {
+                    font-size: 20px;
+                }
+            }
+
+            .fa-sign-in,
+            .icon-ico-search,
+            .icon-location {
+                @include media-breakpoint-up(xl) {
+                    font-size: 20px;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: 1.7143rem;
+                }
+            }
+        }
+
+        .navigation-section {
+            justify-content: flex-end;
+            margin-left: auto;
+
+            @include media-breakpoint-up(xl) {
+                padding-right: 0;
+                margin-left: unset;
+            }
+
+            @media (min-width: $screen1367px) {
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 8.33%;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            @include media-breakpoint-up(fhd) {
+                padding-right: 15px;
+
+                @include flex(8.33%);
+            }
+
+            img {
+                height: 20px;
+                width: auto;
+
+                @include media-breakpoint-up(xxl) {
+                    height: 26px;
+                }
+            }
+        }
+
+        .main-logo {
+            @include media-breakpoint-up(lg) {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: none;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                left: 50%;
+            }
+
+            .icon-ico-logo {
+                @include media-breakpoint-up(xxl) {
+                    font-size: 1.714rem !important;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.414rem;
+                }
+            }
+        }
+
+        .btn-search {
+            @include media-breakpoint-up(xxl) {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .navbar-header {
+        .account-header,
+        .stores-find {
+            @include media-breakpoint-up(lg) {
+                margin-left: 15px;
+            }
+        }
+
+        .minicart {
+            @include media-breakpoint-up(md) {
+                margin-left: 0;
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-left: 15px;
+            }
+
+            .minicart-icon {
+                &::before {
+                    content: ' ';
+                    background: $shoppingBagIcon no-repeat center;
+                    display: inline-block;
+                    width: 21px;
+                    height: 23px;
+                    margin-top: 4px;
+
+                    @include media-breakpoint-up(xl) {
+                        margin-top: 7px;
+                    }
+                }
+            }
+        }
+
+        .account-header {
+            @include media-breakpoint-up(xl) {
+                margin-left: 20px;
+            }
+
+            .user {
+                display: flex;
+
+                .popover {
+                    .user-item {
+                        a {
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .stores-find {
+            @include media-breakpoint-up(xl) {
+                display: block !important;
+                margin-top: 5px;
+            }
+        }
+
+        .btn-search,
+        .account-header,
+        .stores-find {
+            @media (min-width: $screen1367px) {
+                z-index: 1050;
+            }
+        }
+    }
+
+    #search-collapse {
+        @include media-breakpoint-up(xl) {
+            height: 0;
+        }
+    }
+
+    .page[data-action] & {
+        &:hover,
+        & {
+            .header-content {
+                background-color: $white;
+            }
+
+            .main-menu {
+                .nav-item {
+                    > .nav-link {
+                        color: $colorBunker !important;
+                    }
+                }
+            }
+        }
+
+        .header-content {
+            &::before {
+                background: none;
+            }
+
+            .btn-search,
+            .icon-ico-menu-bar,
+            .minicart .minicart-icon,
+            .main-logo .icon-ico-logo,
+            .account-header .fa-sign-in,
+            .stores-find .icon-location {
+                color: black;
+            }
+
+            .language-selection-block {
+                .country-selector {
+                    color: $colorBunker;
+
+                    a {
+                        color: $colorBunker;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sticky-header {
+    .section-header.new-header {
+        @include media-breakpoint-up(lg) {
+            .navigation-section {
+                position: relative;
+                right: auto;
+                top: auto;
+                z-index: 2;
+                transform: none;
+            }
+
+            .main-logo {
+                animation: none;
+            }
+
+            .btn-search {
+                display: block !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import '~animate.css/animate.css';
+
+@-webkit-keyframes stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

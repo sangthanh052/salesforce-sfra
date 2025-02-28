@@ -1,0 +1,73 @@
+.double-eleven-faq,
+.double-eleven-tnc {
+    .modal {
+        width: 90%;
+        left: 50%;
+
+        @include transform(translateX(-50%));
+
+        .modal-content {
+            padding: 4%;
+
+            @include border-radius(25px);
+
+            .modal-wrapper {
+                border: 2px solid $black;
+                position: relative;
+
+                @include border-radius(25px);
+            }
+
+            .modal-header {
+                border: none;
+                justify-content: center;
+                background-color: $white;
+                width: 30%;
+                margin: -1% auto;
+                padding: 0;
+
+                .modal-title {
+                    font-family: $dinBoldAlternate;
+                    border: 1px solid $black;
+                    font-size: 5vw;
+                    width: auto;
+                    line-height: 1.2;
+                    padding: 0 1rem;
+
+                    @include border-radius(5px);
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 2vw;
+                    }
+                }
+
+                .btn-close-popup {
+                    right: 1%;
+                    top: 0;
+                    font-size: $fontSize25;
+
+                    @supports (-webkit-touch-callout: none) {
+                        right: -2%;
+                    }
+                }
+            }
+
+            .modal-body {
+                font-weight: 500;
+                font-size: 2.8vw;
+
+                @include media-breakpoint-up(md) {
+                    font-size: $fontSize12;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: $fontSize14;
+                }
+
+                p {
+                    margin-bottom: 3%;
+                }
+            }
+        }
+    }
+}

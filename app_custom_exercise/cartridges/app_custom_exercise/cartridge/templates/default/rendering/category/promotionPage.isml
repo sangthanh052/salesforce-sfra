@@ -1,0 +1,47 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<isinclude template="components/modules" />
+
+<isdecorate template="common/layout/page">
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/search.css');
+        if (pdict.customCSSFile) {
+            assets.addCss(pdict.customCSSFile);
+        }
+        assets.addJs('/js/search.js');
+        if (pdict.customJSFile) {
+            assets.addJs(pdict.customJSFile);
+        }
+    </isscript>
+
+    <div class="promotion-page">
+        <div class="content-slot-wrapper">
+            <div class="firstly-content">
+                <isslot id="cat-landing-slotbanner-m" context="category" description="Banner at the top of Campaign Pages"
+                    context-object="${pdict.category}" />
+            </div>
+        </div>
+
+        <div class="sub-categories">
+            <isloop items="${pdict.productSearch.subCategories}" var="subCategory" status="status">
+                <div id="${subCategory.id}" class="sub-category-name">
+                    ${subCategory.displayName}
+                </div>
+
+                <div class="product-grid row">
+                    <isinclude url="${URLUtils.url('Search-UpdateGrid', 'cgid', subCategory.id)}" />
+                </div>
+            </isloop>
+        </div>
+
+        <div class="content-slot-wrapper">
+            <div class="secondly-content">
+                <isslot id="cat-landing-slotbottom-m" context="category"
+                    description="The term and condition for customer at the end of Campaign Pages"
+                    context-object="${pdict.category}" />
+            </div>
+        </div>
+    </div>
+    <isinclude template="product/productTileTemplate" />
+</isdecorate>

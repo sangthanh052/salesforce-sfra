@@ -1,0 +1,257 @@
+body {
+    .section-header.new-header {
+        .main-menu {
+            &.appended {
+                #new-menu {
+                    overflow-y: auto;
+
+                    @include media-breakpoint-up(xl) {
+                        overflow-y: unset;
+                    }
+                }
+            }
+        }
+
+        nav#new-menu {
+            #menu-group {
+                .navbar-nav {
+                    .nav-footer {
+                        .link-block {
+                            padding-bottom: 0;
+
+                            .profile-links {
+                                .user {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .category-level-2 {
+                        .category-level-2-title {
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    .nav-item {
+                        > .dropdown-menu {
+                            @include media-breakpoint-up(xl) {
+                                min-width: 1200px;
+                                left: -10%;
+                            }
+
+                            @media (min-width: $screen1367px) {
+                                left: 0;
+                            }
+
+                            @include media-breakpoint-up(xxl) {
+                                min-width: 1400px;
+                            }
+                        }
+                    }
+
+                    .dropdown-discover {
+                        .dropdown-item,
+                        .dropdown-item-category_discover-more {
+                            &.show-all-category {
+                                width: 100% !important;
+                                max-width: 100% !important;
+                                padding-top: 10px !important;
+                                text-align: left !important;
+                                flex: 0 0 100% !important;
+                            }
+                        }
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        min-width: 1200px;
+                        margin-top: 0;
+
+                        .category-discover {
+                            li {
+                                &.category-level-2 {
+                                    > .dropdown-item {
+                                        min-width: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (min-width: $screen1280px) {
+                        min-width: auto;
+                    }
+
+                    @media (min-width: $screen1367px) {
+                        min-width: 1200px;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        min-width: 1400px;
+
+                        .dropdown-menu {
+                            min-width: 1400px;
+
+                            .dropdown-menu {
+                                min-width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .item-loyalty-program-section {
+                align-items: center;
+                justify-content: center;
+                display: none;
+
+                @include media-breakpoint-up(xl) {
+                    display: flex;
+                }
+
+                #loyalty-program-section {
+                    background-color: $black;
+                    color: $white !important;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    padding: 9px 21px;
+                    margin-left: 10px;
+
+                    @include media-breakpoint-up(xl) {
+                        font-size: $fontSize11;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        font-size: $fontSize12;
+                    }
+                }
+
+                &.active {
+                    #loyalty-program-section {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-header.new-header {
+    .nav-footer {
+        .link-block {
+            &:not(.of-new-header) {
+                display: none;
+            }
+        }
+
+        .of-new-header {
+            display: block !important;
+        }
+
+        &.is-login {
+            .of-new-header {
+                @media screen and (max-width: $screen1024px) {
+                    li:first-child {
+                        a {
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        .profile-links {
+                            .popover-bottom {
+                                display: block;
+                            }
+
+                            .user-item {
+                                display: none;
+                            }
+
+                            .logout-item {
+                                bottom: 47px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-toggleable-left {
+        &.navbar-toggleable-sm {
+            @include media-breakpoint-up(xl) {
+                @include flex(66.67%);
+            }
+
+            @media (min-width: $screen1367px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .nav-item {
+                .nav-link {
+                    @include media-breakpoint-up(xml) {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        padding-left: 1.2rem;
+                        padding-right: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-group {
+        .nav-footer {
+            .is-login-account {
+                display: none;
+            }
+
+            &.is-login {
+                ul {
+                    .profile-links {
+                        .user {
+                            margin: 0;
+
+                            .popover {
+                                top: 0;
+                            }
+                        }
+                    }
+
+                    li:first-child {
+                        a {
+                            span:first-child {
+                                display: none;
+                            }
+
+                            .is-login-account {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social-list-wrapper {
+                padding: 10px 5px;
+                text-align: left;
+
+                h5 {
+                    display: none;
+                }
+
+                .social-list {
+                    ul {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

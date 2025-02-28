@@ -1,0 +1,150 @@
+.promotion-wrapper {
+    .firstly-content {
+        .block-head-category {
+            width: 95%;
+            margin: auto;
+            padding-bottom: 1rem;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                font-size: 0;
+
+                li {
+                    display: inline-block;
+                    padding: 0;
+                    vertical-align: top;
+                    font-size: 1rem;
+                    margin-bottom: 0.53125rem;
+                    box-sizing: border-box;
+
+                    @include media-breakpoint-up(md) {
+                        padding: 0 15px;
+                    }
+
+                    a {
+                        border: 1px solid $black;
+                        display: block;
+                        padding: 1.0714rem 1.1428rem;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(md) {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .product-list-campaign {
+        .product-listing-group {
+            max-width: 100% !important;
+
+            .block-head-category {
+                padding: 0.25rem;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    font-size: 0;
+
+                    li {
+                        border: 1px solid $black;
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: 0.75rem;
+                        margin-right: 0.53125rem;
+                        margin-bottom: 0.53125rem;
+                        box-sizing: border-box;
+
+                        &.col-md-3 {
+                            @include media-breakpoint-up(md) {
+                                max-width: 30%;
+                            }
+                        }
+
+                        a {
+                            display: block;
+                            padding: 1.0714rem 1.1428rem;
+                        }
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        li:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .sub-cat-title {
+                background-color: $veryDarkGray;
+                padding: 1rem 1.1875rem 0.875rem;
+                color: $white;
+                width: 95%;
+                margin: auto;
+
+                @include media-breakpoint-up(md) {
+                    width: calc(95% - 30px);
+                }
+
+                h2 {
+                    font-size: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            .product-grid-wrapper {
+                margin-bottom: 35px;
+            }
+
+            .show-more {
+                padding-bottom: 35px;
+
+                @include media-breakpoint-up(lg) {
+                    padding-bottom: 60px;
+                }
+
+                .sub-cat-view-more {
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    a {
+                        border: 2px solid $black;
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        border-radius: 0;
+                        background-color: $black;
+                        color: $white;
+                        font-size: 2.3vw;
+                        line-height: 1;
+                        padding: 15px 50px;
+                        white-space: nowrap;
+
+                        @include media-breakpoint-up(md) {
+                            padding: 15px 70px;
+                        }
+
+                        @include media-breakpoint-up(lg) {
+                            line-height: 1.2;
+                            font-size: 0.879rem;
+                            letter-spacing: 0.05rem;
+                            padding: 15px 90px;
+                        }
+
+                        @include media-breakpoint-up(xxl) {
+                            font-size: 1.099rem;
+                            padding-top: 11px;
+                            padding-bottom: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

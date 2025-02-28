@@ -1,0 +1,195 @@
+.product-grid {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    .product-tile-col {
+        padding: 15px 10px;
+        min-height: 340px;
+        overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+            padding: 18px;
+            min-height: 480px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            min-height: 550px;
+        }
+
+        &:nth-child(2n + 1) {
+            &::before {
+                width: 2px;
+                top: 10px;
+                right: -1px;
+                bottom: 10px;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            background-color: $lightGray;
+        }
+
+        &::after {
+            bottom: -1px;
+            left: 10px;
+            right: 10px;
+            height: 2px;
+        }
+
+        @include media-breakpoint-up(md) {
+            &::before {
+                width: 2px;
+                top: 10px;
+                right: -1px;
+                bottom: 10px;
+            }
+
+            &:nth-child(3n + 3) {
+                &::before {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .product-promotion-col {
+        @include media-breakpoint-up(lg) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .content-asset {
+            position: relative;
+            height: 100%;
+
+            picture {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+
+            .default-image-size {
+                picture {
+                    position: relative;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .promo-info {
+        position: absolute;
+        top: 22px;
+        left: 15px;
+        z-index: 2;
+
+        @include media-breakpoint-up(lg) {
+            top: 35px;
+            left: 20px;
+        }
+
+        h4 {
+            font-size: $fontSize13;
+            font-weight: 200;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.357rem;
+            }
+        }
+
+        h3 {
+            font-size: 2.714rem;
+            font-weight: 100;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 4.071rem;
+                line-height: 1;
+            }
+        }
+
+        .promo-link {
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            text-align: center;
+            background-color: $white;
+            font-size: $fontSize11;
+            line-height: 23px;
+
+            @include border-radius(50%);
+            @include media-breakpoint-up(lg) {
+                font-size: $fontSize14;
+                width: 30px;
+                height: 30px;
+                line-height: 31px;
+            }
+        }
+    }
+
+    .product {
+        height: 100%;
+    }
+
+    .content-asset {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &.sorted-by-price {
+        .product-tile-col {
+            @include media-breakpoint-up(md) {
+                &:nth-child(3n + 3) {
+                    &::before {
+                        content: '';
+                    }
+                }
+
+                &.right-hand-side-tile {
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product-list-campaign {
+    .product-grid {
+        .product-tile-col {
+            @include media-breakpoint-up(xl) {
+                @include make-col(3);
+
+                &:nth-child(3n + 3) {
+                    &::before {
+                        content: '';
+                    }
+                }
+
+                &:nth-child(4n + 4) {
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}

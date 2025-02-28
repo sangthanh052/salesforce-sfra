@@ -1,0 +1,58 @@
+{
+  "name": "app_custom_exercise",
+  "version": "0.0.1",
+  "description": "New overlay cartridge",
+  "main": "index.js",
+  "scripts": {
+    "lint": "sgmf-scripts --lint js && sgmf-scripts --lint css",
+    "upload": "sgmf-scripts --upload -- ",
+    "uploadCartridge": "sgmf-scripts --uploadCartridge app_custom_exercise",
+    "compile:js": "sgmf-scripts --compile js",
+    "compile:scss": "sgmf-scripts --compile css",
+    "watch": "sgmf-scripts --watch",
+    "watch:static": "sgmf-scripts --watch static"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "css-loader": "^0.28.11",
+    "cssnano": "^4.1.11",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb-base": "^5.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^2.1.5",
+    "proxyquire": "1.7.4",
+    "sass-loader": "^7.0.3",
+    "sgmf-scripts": "^2.0.0",
+    "sinon": "^1.17.4",
+    "stylelint": "^7.1.0",
+    "stylelint-config-standard": "^12.0.0",
+    "stylelint-scss": "^1.3.4",
+    "lodash": "^4.17.10",
+    "swiper": "^8.4.6"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "owl.carousel": "^2.3.4",
+    "sticky-kit": "^1.1.3",
+    "jquery-zoom": "^1.7.21",
+    "jsbarcode": "^3.11.0",
+    "bootstrap-slider": "^11.0.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 10"
+  ],
+  "paths": {
+    "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"
+  },
+  "compiler": {
+    "experience": {
+      "js": true,
+      "scss": true
+    }
+  }
+}

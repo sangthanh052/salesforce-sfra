@@ -1,0 +1,29 @@
+.btn {
+    &:not(.btn-primary) {
+        &.btn-custom-black {
+            @include btnBlack();
+
+            &:focus,
+            &:hover,
+            &:active {
+                background-color: $black;
+                color: $white;
+            }
+
+            &.order-now-btn {
+                color: $white;
+            }
+        }
+
+        &.btn-custom-white {
+            @include btnWhiteBorderBlack();
+
+            &:focus,
+            &:hover,
+            &:active {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}

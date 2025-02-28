@@ -1,0 +1,358 @@
+.loyalty-program {
+    overflow: hidden;
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .header-font {
+        font-weight: 900;
+        font-size: smaller;
+
+        @include media-breakpoint-up(lg) {
+            font-weight: 900;
+            font-size: large;
+        }
+    }
+
+    .bg-black {
+        background-color: $black;
+    }
+
+    .content-font {
+        font-weight: 200;
+    }
+
+    .flex-even {
+        flex: 1;
+    }
+
+    .btn-black {
+        @include btnBlack();
+    }
+
+    .btn-white {
+        @include btnWhiteBorderBlack();
+
+        padding: 0.5rem 1.5rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 1rem 3rem;
+        }
+    }
+
+    .line-size {
+        width: 30px;
+        height: auto;
+
+        @include media-breakpoint-up(lg) {
+            width: 40px;
+            height: auto;
+        }
+    }
+
+    @mixin fontSubHeader {
+        font-weight: 700;
+        font-size: $fontSize20;
+    }
+
+    .brand-title {
+        margin-top: 50%;
+
+        @include fontSubHeader();
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+
+        @include media-breakpoint-up(lg) {
+            img {
+                width: 45%;
+                height: auto;
+            }
+        }
+    }
+
+    .sub-title {
+        @include fontSubHeader();
+    }
+
+    .brand-body {
+        margin-top: 25%;
+        font-size: $fontSize25;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 55%;
+
+            h2 {
+                font-size: $fontSize30;
+                font-weight: 300;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .welcome {
+        margin-bottom: auto;
+        margin-top: auto;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 13%;
+        }
+    }
+
+    .img-container {
+        height: 40px;
+        width: auto;
+
+        img {
+            width: 35px;
+            height: auto;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 1.5rem;
+            height: 80px;
+            width: auto;
+
+            img {
+                width: 72px;
+                height: auto;
+            }
+        }
+    }
+
+    .benefits {
+        .col-4 {
+            padding: 0 5px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            .col-4 {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .title-font {
+        font-weight: 100;
+    }
+
+    .box-shadow {
+        box-shadow: 0 0 5px #d8d8d8;
+        height: 100%;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .calendar,
+    .info,
+    .coin,
+    .point,
+    .money,
+    .note {
+        img {
+            height: 35px;
+            width: auto;
+        }
+
+        @include media-breakpoint-up(lg) {
+            img {
+                height: 56px;
+                width: auto;
+            }
+        }
+    }
+
+    .calendar {
+        p {
+            margin-top: -0.45rem;
+            margin-left: 3rem;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        @include media-breakpoint-up(lg) {
+            p {
+                margin-top: -0.75rem;
+                margin-left: 4rem;
+                font-size: $fontSize11;
+            }
+        }
+    }
+
+    .coin,
+    .point {
+        p {
+            font-weight: 700;
+            font-size: 6px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            p {
+                font-size: $fontSize11;
+            }
+        }
+    }
+
+    .card {
+        border: none;
+    }
+
+    .marble-list {
+        list-style-type: none;
+    }
+
+    .no-padding {
+        padding: 0;
+    }
+
+    /* Tabs */
+    section {
+        background-color: $lightGray;
+    }
+
+    #tabs {
+        color: $black;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: $black;
+        font-weight: bold;
+    }
+
+    .nav-tabs .nav-link {
+        border: none;
+        position: relative;
+    }
+
+    .nav-link.active::after {
+        width: 80%;
+    }
+
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 4px;
+        left: 50%;
+        bottom: 0;
+        background-color: $mostlyBlack;
+        transition: all ease-in-out 0.2s;
+
+        @include translateX(-50%);
+    }
+
+    #tabs .nav-tabs .nav-link {
+        border: 1px solid transparent;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        color: $black;
+        font-size: $size1em;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $size0em6;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: $size1em;
+        }
+    }
+
+    .content-max-width-md {
+        @include media-breakpoint-down(md) {
+            width: max-content;
+        }
+    }
+
+    .justify-content-coin {
+        justify-content: center;
+    }
+
+    #nav-marble {
+        h6 {
+            font-weight: 700;
+        }
+    }
+
+    .bg-lightGray {
+        background-color: $lightGray;
+    }
+
+    .mt-6 {
+        margin-top: 4.5rem;
+    }
+
+    .mt-7 {
+        margin-top: 6rem;
+    }
+
+    .mt-n1 {
+        margin-top: -3px;
+    }
+
+    .border-2 {
+        border-width: 2px;
+    }
+
+    img.check-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .overflow-scroll-x {
+        overflow-x: scroll;
+
+        &-md {
+            @include media-breakpoint-up(md) {
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    .max-content-width {
+        min-width: 700px;
+        white-space: nowrap;
+    }
+
+    .height-20rem {
+        min-height: 20rem;
+        margin-top: 1rem;
+    }
+
+    .custom-dt {
+        @include media-breakpoint-up(lg) {
+            margin-right: 3rem;
+            padding-right: 3rem;
+        }
+    }
+
+    .marble-img-container {
+        @include media-breakpoint-up(lg) {
+            width: 284px;
+
+            img {
+                width: inherit;
+                height: auto;
+            }
+        }
+    }
+
+    .owl-carousel .owl-nav {
+        button.owl-prev,
+        button.owl-next {
+            top: 25%;
+            background: $black;
+            color: $white;
+            border: 1px solid $black;
+        }
+    }
+
+    .overflow-sroll-x {
+        overflow-x: scroll;
+    }
+}

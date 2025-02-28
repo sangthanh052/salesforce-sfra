@@ -1,0 +1,73 @@
+.proxis-country-selector {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    .country-selector-content {
+        @include media-breakpoint-up(lg) {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    }
+
+    .country-selector-page-title {
+        text-align: center;
+        margin-top: 40px;
+        font-size: $fontSize20;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fontSize25;
+            text-align: left;
+        }
+    }
+
+    .country-selector-section-title {
+        margin: 25px 15px 0;
+        font-size: $fontSize17;
+        line-height: $fontSize30;
+        padding: 0 15px;
+        font-weight: 200;
+        border-bottom: 1px solid $black;
+
+        @include media-breakpoint-up(lg) {
+            margin: 25px 15px 0;
+            max-width: 50%;
+        }
+    }
+
+    .country-selector-list {
+        padding: 0 15px;
+        margin-top: 25px;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 50%;
+        }
+    }
+
+    .country-list-content {
+        font-weight: 200;
+
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+            float: left;
+        }
+
+        a {
+            &:hover {
+                header ~ .container & {
+                    color: $darkGray;
+                }
+            }
+        }
+    }
+
+    .country-selector-bg {
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-height: 100%;
+        }
+    }
+}

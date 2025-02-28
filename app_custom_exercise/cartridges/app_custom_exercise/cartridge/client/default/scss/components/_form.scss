@@ -1,0 +1,78 @@
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    font-size: 1em;
+
+    label.form-control-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $darkGray;
+        letter-spacing: 0.5px;
+        @include transition(0.3s);
+
+        &::before {
+            color: $darkGray;
+        }
+
+        &.no-star {
+            &::before {
+                content: '';
+            }
+        }
+    }
+
+    .form-control {
+        padding: 0.2857em 0.1429em;
+        border: none;
+        border-bottom: 1px solid $lightGray;
+        border-radius: 0;
+        background-color: transparent;
+        height: 2em;
+
+        &:focus {
+            border-bottom: 1px solid $white;
+            outline: none;
+            @include box-shadow(none);
+
+            ~ .focus-border {
+                width: 100%;
+                left: 0;
+                z-index: 1;
+                @include transition(0.3s);
+            }
+        }
+
+        &:focus ~ label,
+        &.has-content ~ label {
+            top: -0.7143em;
+            transform-origin: left;
+            @include transform(scale(0.8));
+        }
+
+        &.is-invalid:focus {
+            border-color: $white;
+            @include box-shadow(none);
+        }
+    }
+
+    select.form-control {
+        &:not([size]):not([multiple]) {
+            height: 2em;
+        }
+    }
+
+    .focus-border {
+        position: absolute;
+        top: calc(2em - 1px);
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: $black;
+        @include transition(0.4s);
+    }
+
+    &.required label.form-control-label::before {
+        color: $darkGray;
+    }
+}

@@ -1,0 +1,47 @@
+.owl-carousel {
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            @include btnArrowRightCircle();
+            @include translateY(-50%);
+
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            z-index: 3;
+            background-color: $superLightGray;
+            color: $white;
+            outline: 0;
+
+            span {
+                display: none;
+            }
+
+            &::before {
+                @include fontSamsonite();
+                @include translate(-50%, -50%);
+
+                position: absolute;
+                left: 50%;
+                top: 50%;
+            }
+        }
+
+        .owl-prev {
+            left: 0;
+
+            &::before {
+                content: $icon-ico-arrow-left;
+            }
+        }
+
+        .owl-next {
+            right: 0;
+
+            &::before {
+                content: $icon-ico-arrow-right;
+            }
+        }
+    }
+}

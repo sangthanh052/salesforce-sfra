@@ -1,0 +1,206 @@
+.double-eleven-lucky-game-popup {
+    .modal {
+        width: 85%;
+        left: 50%;
+
+        @include transform(translateX(-50%));
+
+        .game-result {
+            textarea {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        .modal-content {
+            text-align: center;
+
+            @include border-radius(25px);
+
+            .modal-header {
+                display: block;
+                width: 90%;
+                border: none;
+                margin: 0 auto;
+                padding: 1.5rem 1rem 0.5rem;
+
+                .modal-title {
+                    font-family: $rainerMedium;
+                    font-size: 16vw;
+                    color: $white;
+                    line-height: 0.5;
+                    padding-bottom: 4%;
+                    text-transform: uppercase;
+                    text-shadow: 0 0 10px $lightPurple, 0 0 20px $lightPurple;
+
+                    @supports (-webkit-touch-callout: none) {
+                        line-height: 0.65;
+                        padding-bottom: 0;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 7.5rem;
+                    }
+                }
+
+                .btn-close-popup {
+                    top: 3px;
+                    right: 8px;
+                    font-size: $fontSize24;
+
+                    @supports (-webkit-touch-callout: none) {
+                        right: 0;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        font-size: $fontSize35;
+                    }
+                }
+            }
+
+            .modal-body {
+                font-family: $dinBoldAlternate;
+                padding: 0 1rem 2rem;
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                .prize-text {
+                    font-size: 6vw;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 3vw;
+                    }
+                }
+
+                .coupon-detail {
+                    font-family: $goBoldHigh;
+                    padding-top: 0.5rem;
+                    font-size: 10vw;
+                    min-height: 6vw;
+                    color: lighten(desaturate(adjust-hue($blue, -14), 41.07), 36.86);
+                    text-transform: uppercase;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 8vw;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 6vw;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        font-size: 4.5vw;
+                    }
+                }
+
+                .coupon-code {
+                    font-family: $rainerRegular;
+                    font-size: 9vw;
+                    box-shadow: 0 4px 10px rgb(166, 217, 232);
+                    width: 65%;
+                    margin: 0 auto 5%;
+                    padding: 3%;
+
+                    @include border-radius(10px);
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 7vw;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 5vw;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        font-size: 3vw;
+                    }
+                }
+
+                .share-email,
+                .copy-coupon {
+                    display: block;
+                    border: 1px solid $black;
+                    margin: 3% auto;
+                    width: 65%;
+                    padding: 1%;
+                    font-size: 3.5vw;
+
+                    @include border-radius(3px);
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 2vw;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        font-size: 1.2vw;
+                    }
+                }
+
+                .copy-coupon {
+                    &.copied {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 0;
+                            height: 0;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            background: rgba($black, 0.72);
+                        }
+
+                        &::after {
+                            content: 'Copied!';
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 7px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 80px;
+                            height: 25px;
+                            text-transform: none;
+                            color: $white;
+                            font-size: $fontSize12;
+                            line-height: 26px;
+                            text-align: center;
+                            background: rgba($black, 0.72);
+                            border-radius: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.double-eleven-game-result-popup {
+    .modal-content {
+        padding: 2%;
+
+        @include border-radius(25px);
+
+        .modal-body {
+            font-family: $dinBoldAlternate;
+            border: 2px solid $black;
+            text-align: center;
+
+            @include border-radius(25px);
+
+            .game-result-msg {
+                margin: 1.5rem;
+                text-align: left;
+            }
+
+            .btn-close-popup {
+                top: 0;
+                right: 5px;
+                font-size: $fontSize22;
+            }
+        }
+    }
+}

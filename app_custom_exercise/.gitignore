@@ -1,0 +1,15 @@
+node_modules/
+cartridges/app_custom_samsonite/cartridge/static/default/css/
+cartridges/app_custom_samsonite/cartridge/static/default/js/
+cartridges/app_custom_samsonite/cartridge/static/zh_HK/css/
+cartridges/app_custom_samsonite/cartridge/static/zh_TW/css/
+
+coverage/
+npm-debug.log
+cartridges.zip
+.idea/
+dw.json
+.DS_Store
+test/appium/webdriver/config.json
+.vscode
+.history

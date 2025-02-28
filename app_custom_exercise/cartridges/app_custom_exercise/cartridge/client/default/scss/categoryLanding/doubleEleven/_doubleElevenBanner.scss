@@ -1,0 +1,161 @@
+.double-eleven-banner {
+    position: relative;
+    min-height: 145vw;
+
+    @include media-breakpoint-up(md) {
+        min-height: 40vw;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .content {
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    .middle-content {
+        position: absolute;
+        top: 27%;
+        left: 51%;
+        text-align: center;
+        width: fit-content;
+
+        @include transform(rotate(-7deg) translateX(-50%));
+
+        @include media-breakpoint-up(md) {
+            top: 41%;
+            left: 50%;
+        }
+
+        .main-title {
+            font-family: $rainerMedium;
+            font-size: 18vw;
+            text-shadow: -2px 3px 5px rgb(251, 187, 169), -2px 7px 2px rgb(229, 88, 126), -5px 7px 5px rgb(229, 88, 126);
+
+            @include media-breakpoint-up(md) {
+                font-size: 7vw;
+            }
+        }
+
+        .middle-text {
+            font-size: 9.5vw;
+            text-shadow: -2px 3px 5px rgb(251, 187, 169), -2px 7px 2px rgb(229, 88, 126), -5px 7px 5px rgb(229, 88, 126);
+
+            @include media-breakpoint-up(md) {
+                font-size: 4vw;
+            }
+        }
+    }
+
+    .main-content {
+        position: absolute;
+        text-shadow: 0 0 10px $lightPurple, 0 0 15px $lightPurple, 0 0 20px $lightPurple;
+    }
+
+    .left-content {
+        font-family: $rainerMedium;
+        bottom: 17%;
+        left: 15%;
+        line-height: 0.87;
+        font-size: 21vw;
+        width: 30%;
+
+        @include media-breakpoint-up(md) {
+            width: 15%;
+            font-size: 10vw;
+            bottom: 19%;
+            left: 16%;
+        }
+    }
+
+    .right-content {
+        right: 10%;
+        bottom: 6%;
+        width: 25%;
+        line-height: 0.82;
+        font-weight: 200;
+
+        @include media-breakpoint-up(md) {
+            top: 11%;
+            right: 15%;
+            width: 10%;
+        }
+
+        .right-text-top {
+            font-family: $gilroyExtraBold;
+            font-size: 3vw;
+            margin-bottom: -0.5vw;
+
+            @supports (-webkit-touch-callout: none) {
+                margin-bottom: 0.8vw;
+            }
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.3vw;
+
+                @supports (-webkit-touch-callout: none) {
+                    margin-bottom: 1vw;
+                }
+            }
+        }
+
+        .sale-right-text {
+            font-family: $rainerMedium;
+            font-size: 21vw;
+
+            @include media-breakpoint-up(md) {
+                font-size: 10vw;
+            }
+
+            p {
+                white-space: nowrap;
+                margin: 0;
+            }
+
+            .text-content {
+                font-size: 28vw;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 13vw;
+                }
+            }
+
+            .percent-letter {
+                font-family: $goBoldHigh;
+                font-size: 17.25vw;
+                margin-left: -2vw;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 8.25vw;
+                    margin-left: -1vw;
+                }
+            }
+        }
+    }
+}
+
+.double-eleven-flash-deals,
+.double-eleven-summary-offer,
+.double-eleven-add-on-offer,
+.double-eleven-lucky-draw-game,
+.double-eleven-iconic-first,
+.double-eleven-iconic-second,
+.double-eleven-support {
+    margin-top: -1px;
+    position: relative;
+
+    picture {
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        position: absolute;
+        text-align: center;
+        color: $white;
+        width: 100%;
+    }
+}

@@ -1,0 +1,21 @@
+.nomenu-header {
+    height: 3.57142em;
+    border-bottom: 2px solid $gray;
+    margin: 0 15px;
+    font-size: $fontSize14;
+
+    @include media-breakpoint-up(md) {
+        font-size: $fontSize20;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: $fontSize25;
+    }
+
+    .brand {
+        width: 8em;
+        margin-left: -4em;
+        height: auto;
+        padding-top: 1.14285em;
+    }
+}

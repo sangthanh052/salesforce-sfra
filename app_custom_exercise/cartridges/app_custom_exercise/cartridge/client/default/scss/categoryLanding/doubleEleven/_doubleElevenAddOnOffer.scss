@@ -1,0 +1,44 @@
+.double-eleven-add-on-offer {
+    .content {
+        top: 0;
+
+        @include media-breakpoint-up(md) {
+            top: 3%;
+        }
+    }
+
+    .title-section {
+        font-family: $gilroyExtraBold;
+        margin-bottom: 7%;
+        text-shadow: 0 0 10px $lightPurple, 0 0 20px $lightPurple;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 2%;
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-size: 8vw;
+
+            @include media-breakpoint-up(md) {
+                font-size: 4vw;
+            }
+        }
+
+        .title-message {
+            font-size: 3vw;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.2vw;
+            }
+        }
+    }
+
+    .image-section {
+        @include media-breakpoint-up(md) {
+            width: 85%;
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.update.product.reviews",
+                "description": "Update Product Reviews",
+                "module": "app_custom_samsonite/cartridge/scripts/jobsteps/updateProductReviews.js",
+                "function": "execute",
+                "parameters": {
+                    "parameters": []
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when execution was successful."
+                        },
+                        {
+                            "@code": "NOT_FOUND",
+                            "description": "In case exit status is OK and no files were found."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

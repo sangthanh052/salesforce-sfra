@@ -1,0 +1,190 @@
+.collection-banner {
+    position: relative;
+
+    .image-field {
+        width: 100%;
+
+        picture,
+        img {
+            max-width: 75%;
+        }
+    }
+
+    .image-right {
+        text-align: right;
+    }
+}
+
+.collection-points {
+    padding: 0.857em 0.857em 0;
+    overflow: hidden;
+    font-weight: 700;
+
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        padding-bottom: 0.857em;
+        overflow: auto;
+
+        @include displayFlex();
+
+        @include media-breakpoint-up(md) {
+            justify-content: center;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 4.286em;
+            white-space: nowrap;
+
+            @include media-breakpoint-up(lg) {
+                margin-right: 6em;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin-right: 8em;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                margin-right: 10em;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.collection-page {
+    padding-bottom: 12.143em;
+    padding-top: 1.429em;
+
+    .collection-banner {
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+}
+
+.collection-content {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .collection-item {
+        border-bottom: 1px solid $lightGray;
+
+        @include media-breakpoint-up(md) {
+            border-bottom: 0;
+        }
+    }
+
+    .item-content {
+        padding-left: 1.43em;
+        padding-right: 2.143em;
+        padding-top: 2.5em;
+
+        @include displayFlex();
+
+        @include media-breakpoint-up(md) {
+            border-bottom: 1px solid $lightGray;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-left: 1.43em;
+            padding-right: 1.43em;
+        }
+    }
+
+    .category-name,
+    .category-thumb {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .category-name {
+        font-size: $fontSize20;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(lg) {
+            flex: 0 0 40%;
+            max-width: 40%;
+            font-size: $fontSize14;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: $fontSize18;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: $fontSize20;
+        }
+
+        a {
+            padding-top: 1em;
+            display: block;
+        }
+    }
+
+    .category-thumb {
+        @include media-breakpoint-up(lg) {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+
+        &.collection-type-luggage {
+            height: 85px;
+            overflow: hidden;
+
+            @include media-breakpoint-up(xl) {
+                height: 105px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                height: 127px;
+            }
+
+            img {
+                @include media-breakpoint-up(md) {
+                    margin-top: -5%;
+                }
+            }
+        }
+
+        &.collection-type-backpack-bag {
+            height: 85px;
+            overflow: hidden;
+
+            @include media-breakpoint-up(xl) {
+                height: 105px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                height: 127px;
+            }
+
+            img {
+                margin-top: -40%;
+            }
+        }
+
+        &.collection-type-accessories {
+            height: 85px;
+            overflow: hidden;
+
+            @include media-breakpoint-up(xl) {
+                height: 105px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                height: 127px;
+            }
+
+            img {
+                margin-top: -50%;
+            }
+        }
+    }
+}

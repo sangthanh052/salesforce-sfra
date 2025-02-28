@@ -1,0 +1,43 @@
+.breadcrumb {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding: 0;
+    font-size: 0.714rem;
+    background: none;
+
+    @include media-breakpoint-up(md) {
+        font-size: $fontSize15;
+        letter-spacing: 0.1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: $fontSize14;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: $fontSize15;
+    }
+
+    .container & {
+        border-bottom: 0;
+    }
+
+    li.breadcrumb-item {
+        a {
+            color: $black;
+        }
+
+        &::before {
+            content: '>';
+            padding-left: 0.4em;
+            padding-right: 0.2em;
+        }
+
+        &:first-child {
+            &::before {
+                content: none;
+            }
+        }
+    }
+}

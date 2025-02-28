@@ -1,0 +1,104 @@
+.share-email-popup {
+    .modal {
+        width: 85%;
+        left: 50%;
+
+        @include transform(translateX(-50%));
+
+        .modal-content {
+            border: 2px solid $black;
+            font-family: $dinBoldAlternate;
+
+            @include border-radius(25px);
+
+            .modal-header {
+                border: none;
+                padding: 0.5rem;
+
+                .btn-close-popup {
+                    top: 2px;
+                    right: 8px;
+                    font-size: $fontSize24;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: $fontSize30;
+                    }
+                }
+            }
+
+            .modal-body {
+                padding: 5% 10%;
+
+                .input-group {
+                    display: block;
+                    width: 100%;
+
+                    input {
+                        font-weight: 400;
+                        width: 100%;
+                        margin-bottom: 1rem;
+                        padding: 0.5rem;
+                        border: 1px solid;
+
+                        @include media-breakpoint-up(md) {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                .btn-close-popup {
+                    right: 15px;
+                    top: 0;
+                    font-size: $fontSize30;
+                }
+
+                h3 {
+                    font-size: $fontSize14;
+                    margin-bottom: 0.5rem;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: $fontSize16;
+                    }
+                }
+
+                .send-email {
+                    display: block;
+                    text-align: center;
+                    font-size: $fontSize14;
+                    width: 100%;
+                    border: none;
+                    margin-top: 3.5rem;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    background-color: transparent;
+                    box-shadow: 0 4px 10px rgb(166, 217, 232);
+
+                    @include media-breakpoint-up(md) {
+                        font-size: $fontSize16;
+                        width: 90%;
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    font-weight: 500;
+                    font-size: $fontSize14;
+                    color: $success;
+                    display: none;
+                    bottom: 25%;
+
+                    &.error {
+                        color: $red;
+                    }
+
+                    &.invalid-feedback {
+                        color: $red;
+                        display: block;
+                        bottom: 12%;
+                        overflow-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+}

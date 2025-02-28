@@ -1,0 +1,63 @@
+.is-brand-site {
+    ~ .page {
+        .section-header {
+            .header-content {
+                .btn-search,
+                .stores-find,
+                .link-second-block {
+                    display: none !important;
+                }
+
+                .main-menu {
+                    > .container-fluid {
+                        height: 100%;
+
+                        @include media-breakpoint-up(lg) {
+                            height: auto;
+                        }
+
+                        .navbar {
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-footer {
+            .footer-top-content {
+                .about-info,
+                .others-info {
+                    display: none;
+                }
+            }
+        }
+
+        .search-results-wrapper {
+            .product-promotion-col {
+                display: none;
+            }
+        }
+
+        .account-page {
+            .wishlist-account-card,
+            .my-qa-card {
+                display: none;
+            }
+        }
+
+        .help-block {
+            display: none !important;
+        }
+    }
+
+    .floating-buttons {
+        .one-to-one-talk {
+            display: none;
+        }
+    }
+
+    #gladlyChat_container {
+        display: none !important;
+    }
+}

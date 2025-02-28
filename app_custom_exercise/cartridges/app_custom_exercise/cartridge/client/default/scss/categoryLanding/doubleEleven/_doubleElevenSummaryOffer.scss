@@ -1,0 +1,129 @@
+.double-eleven-summary-offer {
+    .content {
+        top: 10%;
+    }
+
+    .title-section {
+        font-family: $gilroyExtraBold;
+        font-size: 7vw;
+        margin: 2% 0 10%;
+        text-shadow: 0 0 10px $lightPurple, 0 0 20px $lightPurple;
+
+        @include media-breakpoint-up(md) {
+            font-size: 4vw;
+            margin: 5% 0 4%;
+        }
+    }
+
+    .summary-section {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include displayFlex();
+
+        .summary-item {
+            width: 47%;
+            position: relative;
+            margin-bottom: 12%;
+
+            @include media-breakpoint-up(md) {
+                width: 24%;
+                margin-bottom: 0;
+            }
+
+            &:first-child {
+                left: 5%;
+
+                @include media-breakpoint-up(md) {
+                    left: 1%;
+                }
+            }
+
+            a {
+                color: $white;
+            }
+        }
+
+        .main-content {
+            position: absolute;
+            top: 18%;
+            left: 7%;
+            width: 50%;
+            font-family: $rainerMedium;
+            line-height: 0.81;
+            text-transform: uppercase;
+            text-align: left;
+            text-shadow: 0 0 8px $lightPurple, 0 0 5px $lightPurple;
+
+            @include media-breakpoint-up(md) {
+                left: 5%;
+                top: 8%;
+            }
+
+            .top-content {
+                font-size: 7vw;
+
+                @supports (-webkit-touch-callout: none) {
+                    margin-bottom: 1vw;
+                }
+
+                @include media-breakpoint-up(md) {
+                    font-size: 3vw;
+                }
+            }
+
+            .sale-content {
+                font-size: 17vw;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 10vw;
+                }
+
+                p {
+                    margin: 0;
+                    white-space: nowrap;
+                }
+
+                .text-content {
+                    font-size: 25vw;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 13vw;
+                    }
+                }
+
+                .percent-letter {
+                    font-family: $goBoldHigh;
+                    font-size: 14vw;
+                    margin-left: -1.5vw;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 8.25vw;
+                        margin-left: -1vw;
+                    }
+                }
+            }
+        }
+
+        .second-summary {
+            .main-content {
+                top: 33%;
+                left: -8%;
+
+                @include media-breakpoint-up(md) {
+                    top: 20%;
+                    left: -4%;
+                }
+
+                .sale-content {
+                    font-size: 21vw;
+                    line-height: 0.85;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 11.5vw;
+                    }
+                }
+            }
+        }
+    }
+}

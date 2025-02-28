@@ -1,0 +1,43 @@
+.sort-block {
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            list-style: none;
+            border-bottom: 1px solid $lightGray;
+            font-size: 1rem;
+            color: $darkGray;
+            padding: 15px 0;
+            display: block;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                color: $black;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background-color: $darkBlue;
+                position: absolute;
+                right: 0;
+                top: 50%;
+
+                @include transform(translateY(-50%) scale(0));
+            }
+
+            &.selected {
+                &::before {
+                    @include transform(translateY(-50%) scale(1));
+                }
+            }
+        }
+    }
+}

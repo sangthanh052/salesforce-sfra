@@ -1,0 +1,71 @@
+body.panel-opened {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.custom-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: $zindex-fixed;
+    background: $white;
+    padding: 22px 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+
+    @include transition(ease-in-out 0.4s);
+    @include media-breakpoint-up(md) {
+        max-width: 380px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        overflow-x: auto;
+    }
+
+    .panel-opened & {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.right-panel {
+        right: -100%;
+
+        .panel-opened & {
+            right: 0;
+        }
+    }
+
+    &.left-panel {
+        left: -100%;
+
+        .panel-opened & {
+            left: 0;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.1501rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .close {
+        position: absolute;
+        z-index: 1;
+        top: 22px;
+        right: 18px;
+
+        @include opacity(1);
+
+        &:hover,
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+}

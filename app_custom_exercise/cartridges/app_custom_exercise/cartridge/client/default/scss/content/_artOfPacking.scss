@@ -1,0 +1,718 @@
+html {
+    body {
+        .art-of-packing-content {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            font-weight: 400;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 0.7rem;
+                line-height: 0.8rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+
+            .ssn-text {
+                @include media-breakpoint-up(sm) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+                @include media-breakpoint-up(uhd) {
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                }
+            }
+
+            .ssn-container {
+                overflow: hidden;
+            }
+
+            .container {
+                @include media-breakpoint-up(xl) {
+                    max-width: 1600px;
+                }
+            }
+
+            .ssn-header-banner {
+                p {
+                    margin-top: 25px;
+                    font-size: 0.9rem;
+                    line-height: 1rem;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: 1.2rem;
+                        line-height: 1.5rem;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+
+                    @include media-breakpoint-up(uhd) {
+                        font-size: 4rem;
+                        line-height: 4.4rem;
+                    }
+                }
+
+                h1 {
+                    font-weight: bold;
+
+                    @include media-breakpoint-up(sm) {
+                        font-size: 3rem;
+                    }
+
+                    @include media-breakpoint-up(uhd) {
+                        font-size: 7rem;
+                    }
+                }
+            }
+
+            .ssn-lang {
+                .active {
+                    font-weight: bold;
+                }
+            }
+
+            .ssn-icon {
+                width: 38px;
+                height: 38px;
+                background-color: transparent;
+                border: 0;
+                padding: 0;
+
+                img {
+                    width: 100%;
+                }
+
+                i {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+
+                &.ssn-sm {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .ssn-parallax {
+                position: relative;
+            }
+
+            .ssn-btn {
+                cursor: pointer;
+
+                &:focus {
+                    outline: transparent;
+                }
+            }
+
+            .ssn-instagram,
+            .ssn-youtube {
+                opacity: 0.5;
+            }
+
+            .ssn-Logo-header {
+                a {
+                    display: block;
+                    width: 200px;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .ssn-square {
+                width: 100%;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    padding-bottom: 100%;
+                }
+            }
+
+            .ssn-nofi {
+                position: relative;
+
+                .ssn-close {
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                }
+            }
+
+            .ssn-header-banner {
+                position: relative;
+                overflow: hidden;
+
+                .ssn-content {
+                    position: relative;
+                    min-width: 220px;
+                    width: 100%;
+                    max-width: 33.33%;
+
+                    @include media-breakpoint-up(md) {
+                        max-width: 55%;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        max-width: 33.33%;
+                    }
+
+                    @include media-breakpoint-up(fhd) {
+                        min-height: 30%;
+                        max-width: 50%;
+                    }
+                }
+
+                .ssn-bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    .ssn-top-left,
+                    .ssn-top-center,
+                    .ssn-top-right,
+                    .ssn-bottom-left,
+                    .ssn-bottom-center,
+                    .ssn-bottom-right {
+                        position: absolute;
+                        display: block;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    .ssn-top-left {
+                        bottom: 90%;
+                        right: 97%;
+                        width: 100%;
+
+                        @include media-breakpoint-up(sm) {
+                            bottom: 75%;
+                            right: 100%;
+                        }
+
+                        @include media-breakpoint-up(lg) {
+                            bottom: 110%;
+                        }
+
+                        @include media-breakpoint-up(fhd) {
+                            bottom: 30%;
+                        }
+                    }
+
+                    .ssn-top-center {
+                        bottom: 120%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 80%;
+
+                        @include media-breakpoint-up(sm) {
+                            bottom: 115%;
+                        }
+
+                        @include media-breakpoint-up(lg) {
+                            bottom: 125%;
+                        }
+
+                        @include media-breakpoint-up(fhd) {
+                            bottom: 90%;
+                        }
+                    }
+
+                    .ssn-top-right {
+                        bottom: 100%;
+                        left: 110%;
+                        width: 80%;
+
+                        @include media-breakpoint-up(lg) {
+                            bottom: 85%;
+                            left: 120%;
+                        }
+
+                        @include media-breakpoint-up(xxl) {
+                            bottom: 75%;
+                        }
+
+                        @include media-breakpoint-up(fhd) {
+                            bottom: 30%;
+                        }
+                    }
+
+                    .ssn-bottom-left {
+                        top: 50%;
+                        right: 110%;
+                        width: 100%;
+
+                        @include media-breakpoint-up(fhd) {
+                            top: 105%;
+                        }
+                    }
+
+                    .ssn-bottom-center {
+                        top: 110%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 80%;
+
+                        @include media-breakpoint-up(sm) {
+                            bottom: 140%;
+                        }
+
+                        @include media-breakpoint-up(fhd) {
+                            top: 130%;
+                        }
+                    }
+
+                    .ssn-bottom-right {
+                        position: absolute;
+                        top: 55%;
+                        left: 110%;
+                        display: block;
+                        width: 80%;
+
+                        @include media-breakpoint-up(lg) {
+                            top: 50%;
+                        }
+
+                        @include media-breakpoint-up(fhd) {
+                            top: 105%;
+                        }
+                    }
+                }
+            }
+
+            .ssn-info {
+                max-width: 500px;
+
+                @include media-breakpoint-up(uhd) {
+                    max-width: 1500px;
+                }
+
+                .ssn-numb {
+                    font-size: 9rem;
+                    font-weight: 900px;
+                    line-height: 1;
+                    margin-bottom: 0;
+
+                    @include media-breakpoint-up(uhd) {
+                        font-size: 15rem;
+                    }
+                }
+
+                .ssn-quote {
+                    width: 32px;
+                    height: 32px;
+                    float: left;
+                    margin-right: 10px;
+                    margin-top: 4px;
+
+                    i {
+                        display: block;
+                    }
+                }
+            }
+
+            .ssn-section-1,
+            .ssn-section-2,
+            .ssn-section-3,
+            .ssn-section-4,
+            .ssn-section-5 {
+                .ssn-info {
+                    margin-top: 0;
+                    margin-left: 0;
+
+                    .ssn-numb {
+                        position: absolute;
+
+                        @include media-breakpoint-up(md) {
+                            position: inherit;
+                            top: inherit;
+                            right: inherit;
+                            left: inherit;
+                        }
+                    }
+                }
+
+                .p-5 {
+                    padding: 4.5rem !important;
+
+                    @include media-breakpoint-up(sm) {
+                        padding: 2rem !important;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        padding: 4.5rem !important;
+                    }
+                }
+            }
+
+            .ssn-section-1,
+            .ssn-section-2 {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+
+                .ssn-content {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .ssn-bg {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 90vh;
+                    display: block;
+                    object-fit: cover;
+
+                    @include media-breakpoint-up(md) {
+                        position: absolute;
+                        height: 120%;
+                        margin-top: -10%;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        margin-top: 0;
+                    }
+
+                    @include media-breakpoint-up(fhd) {
+                        margin-top: -5%;
+                    }
+                }
+
+                .ssn-info {
+                    max-width: 600px;
+
+                    @include media-breakpoint-up(uhd) {
+                        max-width: 1500px;
+                    }
+                }
+
+                .ssn-numb {
+                    top: -80px;
+                }
+            }
+
+            .ssn-section-1 {
+                .ssn-info {
+                    @include media-breakpoint-up(md) {
+                        margin-left: -85px;
+                    }
+                }
+            }
+
+            .ssn-section-1,
+            .ssn-section-3,
+            .ssn-section-5 {
+                .ssn-info {
+                    .ssn-numb {
+                        right: 4rem;
+                    }
+                }
+            }
+
+            .ssn-section-2,
+            .ssn-section-4 {
+                .ssn-info {
+                    .ssn-numb {
+                        left: 4rem;
+                    }
+                }
+            }
+
+            .ssn-section-3,
+            .ssn-section-5 {
+                .ssn-bg {
+                    margin-left: -80px;
+
+                    @include media-breakpoint-up(md) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .ssn-section-5 {
+                .ssn-bg {
+                    @include media-breakpoint-up(lg) {
+                        margin-top: -10%;
+                    }
+                }
+
+                .ssn-content {
+                    @include media-breakpoint-up(fhd) {
+                        margin-top: -11%;
+                    }
+                }
+
+                .ssn-info {
+                    @include media-breakpoint-up(fhd) {
+                        margin-top: 20%;
+                    }
+                }
+            }
+
+            .ssn-section-4 {
+                .ssn-bg {
+                    margin-left: 80px;
+
+                    @include media-breakpoint-up(md) {
+                        margin-left: 0;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        margin-top: -10%;
+                    }
+                }
+
+                .ssn-info {
+                    @include media-breakpoint-up(fhd) {
+                        margin-top: -10%;
+                    }
+                }
+            }
+
+            .ssn-section-2 {
+                @include media-breakpoint-up(md) {
+                    margin-top: 0;
+                }
+            }
+
+            .ssn-section-3,
+            .ssn-section-4,
+            .ssn-section-5 {
+                @include media-breakpoint-up(md) {
+                    margin-top: -10vw;
+                }
+
+                .ssn-numb {
+                    top: -130px;
+                }
+            }
+
+            .ssn-section-5 {
+                .ssn-info {
+                    @include media-breakpoint-up(lg) {
+                        margin-top: 5vw;
+                    }
+                }
+            }
+
+            .ssn-section-3 {
+                @include media-breakpoint-up(fhd) {
+                    margin-top: -6%;
+                }
+            }
+
+            .ssn-section-4 {
+                @include media-breakpoint-up(fhd) {
+                    margin-top: -14%;
+                }
+
+                .ssn-info {
+                    margin-top: 0;
+                }
+            }
+
+            .ssn-section-5 {
+                @include media-breakpoint-up(fhd) {
+                    margin-top: -8%;
+                }
+
+                .ssn-content {
+                    margin-top: 0;
+                }
+
+                .ssn-info {
+                    margin-top: 0;
+                }
+            }
+
+            .ssn-logo-footer {
+                height: 28px;
+                display: block;
+
+                img {
+                    display: block;
+                    height: 100%;
+                }
+            }
+
+            .p-sm-5 {
+                padding: 4.5rem !important;
+
+                @include media-breakpoint-up(sm) {
+                    padding: 2rem !important;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    padding: 4.5rem !important;
+                }
+            }
+        }
+
+        footer {
+            @include media-breakpoint-up(fhd) {
+                margin-top: 0% !important;
+            }
+        }
+
+        .icon-arrow-move-up {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat -32px 0;
+            background-size: 96px;
+        }
+
+        .icon-cart {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat -64px 0;
+            background-size: 96px;
+        }
+
+        .icon-close {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat -32px -64px;
+            background-size: 96px;
+        }
+
+        .icon-instagram {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat -32px -32px;
+            background-size: 96px;
+        }
+
+        .icon-menu {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat -64px -32px;
+            background-size: 96px;
+        }
+
+        .icon-quote {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat 0 -64px;
+            background-size: 96px;
+        }
+
+        .icon-search {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat 0 -32px;
+            background-size: 96px;
+        }
+
+        .icon-youtube {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites.png") no-repeat 0 0;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-arrow-move-up {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat -32px 0;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-cart {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat -64px 0;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-close {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat -32px -64px;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-instagram {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat -32px -32px;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-menu {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat -64px -32px;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-quote {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat 0 -64px;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-search {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat 0 -32px;
+            background-size: 96px;
+        }
+
+        .ssn-icon-white.icon-youtube {
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url("../images/icons/sprites/sprites-white.png") no-repeat 0 0;
+            background-size: 96px;
+        }
+    }
+}

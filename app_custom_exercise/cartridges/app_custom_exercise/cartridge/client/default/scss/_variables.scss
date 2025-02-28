@@ -1,0 +1,168 @@
+
+$gtAmericaFontPath:             '../fonts/GTAmerica' !default;
+$gtAmerica:                     'GT-America' !default;
+$gtAmericaExtended:             'GT-America-Extended' !default;
+
+$primaryFont:                   $gtAmerica !default;
+$secondaryFont:                 $gtAmericaExtended !default;
+
+$brightGray: #ececec;
+$colorBlack: #151414 !default;
+$colorWhite: #fff !default;
+$grayWhite:  #61584c;
+$colorGallery: #eee;
+$colorBunker: #091010;
+$colorGrey: #f6f6f6;
+$colorSilver: #ccc;
+$colorRed: #c00;
+$colorMediumGrey : #676767;
+$svg-arrow-down: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGRlZnM+PC9kZWZzPjxnIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMDsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1taXRlcmxpbWl0OiAxMDsgZmlsbDogbm9uZTsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS40MDY1OTM0MDY1OTM0MDE2IDEuNDA2NTkzNDA2NTkzNDAxNikgc2NhbGUoMi44MSAyLjgxKSIgPjxwYXRoIGQ9Ik0gOTAgMjQuMjUgYyAwIC0wLjg5NiAtMC4zNDIgLTEuNzkyIC0xLjAyNSAtMi40NzUgYyAtMS4zNjYgLTEuMzY3IC0zLjU4MyAtMS4zNjcgLTQuOTQ5IDAgTCA0NSA2MC44IEwgNS45NzUgMjEuNzc1IGMgLTEuMzY3IC0xLjM2NyAtMy41ODMgLTEuMzY3IC00Ljk1IDAgYyAtMS4zNjYgMS4zNjcgLTEuMzY2IDMuNTgzIDAgNC45NSBsIDQxLjUgNDEuNSBjIDEuMzY2IDEuMzY3IDMuNTgzIDEuMzY3IDQuOTQ5IDAgbCA0MS41IC00MS41IEMgODkuNjU4IDI2LjA0MiA5MCAyNS4xNDYgOTAgMjQuMjUgeiIgc3R5bGU9InN0cm9rZTogbm9uZTsgc3Ryb2tlLXdpZHRoOiAxOyBzdHJva2UtZGFzaGFycmF5OiBub25lOyBzdHJva2UtbGluZWNhcDogYnV0dDsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlcjsgc3Ryb2tlLW1pdGVybGltaXQ6IDEwOyBmaWxsOiByZ2IoMCwwLDApOyBmaWxsLXJ1bGU6IG5vbnplcm87IG9wYWNpdHk6IDE7IiB0cmFuc2Zvcm09IiBtYXRyaXgoMSAwIDAgMSAwIDApICIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiAvPjwvZz48L3N2Zz4=") !default;
+$shoppingBagIcon: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMSAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xLjI0NzA3IDcuMjczOTNIMTkuNDA3NVYxOC44OTRDMTkuNDA3NSAyMC41Mzg2IDE4LjEwMjggMjEuODY2NSAxNi41MDE2IDIxLjg2NjVINC4xNTk1OUMyLjU1MTc3IDIxLjg2NjUgMS4yNTM2NiAyMC41MzE5IDEuMjUzNjYgMTguODk0VjcuMjczOTNIMS4yNDcwN1oiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMS40NyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPg0KPHBhdGggZD0iTTUuODM5OSA5LjU2NTUzVjUuNzIzNjJDNS44Mzk5IDMuMjAyNzkgNy44NTYyNyAxLjEzMzU0IDEwLjMyNzMgMS4xMzM1NEMxMi43OTE3IDEuMTMzNTQgMTQuODE0NyAzLjE5NjA0IDE0LjgxNDcgNS43MjM2MlY5LjU2NTUzIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEuNDciIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4NCjwvc3ZnPg0K");
+
+$colorBlack:               #000 !default;
+$colorWhite:               #fff !default;
+$colorRed:                 #c00 !default;
+$colorShadowMountain:      #595959 !default;
+$colorLightGray:           #ced4da !default;
+$screen1280px : 1280px;
+$screen1367px : 1367px;
+$screen1024px : 1024px;
+
+@import 'utilities/font-variables';
+
+//colors
+$white:                 #fff !default;
+$black:                 #000 !default;
+$blue:                  #0070d2 !default;
+$green:                 #008827 !default;
+$lightGreen:            #01a897 !default;
+$primary:               #00a1e0 !default;
+$red:                   #c00 !default;
+$success:                 $green !default;
+$danger:                  $red !default;
+$light-blue:            #7ed0ee !default;
+$darkGray:              #999 !default;
+$darkBlue:              #094f8d !default;
+$gray:                  #dfdfdf !default;
+$lightGrayishBlue:      #f7f9fa !default;
+$lightGrayishOrange:    #f7f6f5 !default;
+$mostlyBlack:           #272727 !default;
+$softRed:               #f55d5d !default;
+$superLightGray:        #f2f2f2 !default;
+$trolleyGrey:           #808080 !default;
+$veryDarkGray:          #333 !default;
+$veryLightGray:         #e8e8e8 !default;
+$lightGrayishGreen:     #f7f8f6 !default;
+$lightGray:             #d8d8d8 !default;
+$silver:                #c2c2c2 !default;
+$superGray:             #6e6e6e !default;
+$superDarkGray:         #787878 !default;
+$lightShadeGray:        #d9d9d9 !default;
+$lightShadeMagenta:     #b6b5b6 !default;
+$lightShadeBlueMagenta: #f4f4f5 !default;
+
+//fonts
+$gothamBlack:                   'Gotham-Black';
+$gothamBold:                    'Gotham-Bold';
+$gothamBook:                    'Gotham-Book';
+$gothamLight:                   'Gotham-Light';
+$gothamMedium:                  'Gotham-Medium';
+$gothamThin:                    'Gotham-Thin';
+$gothamBlack:                   'Gotham-Black';
+$helveticaNeue:                 'HelveticaNeue';
+$helveticaNeueLight:            'HelveticaNeue-Light';
+$helveticaNeueMedium:           'HelveticaNeue-Medium';
+$helveticaNeueThin:             'HelveticaNeue-Thin';
+$helveticaNeueUltraLight:       'HelveticaNeue-UltraLight';
+$helveticaNeueBold:             'HelveticaNeue-Bold';
+$samsoniteIcon:                 'Samsonite-icons';
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xml: 1400px,
+    xxl: 1600px,
+    fhd: 1920px,
+    rt: 2560px,
+    rt15: 2880px,
+    uhd: 3840px,
+    s4k: 4096px
+) !default;
+
+$container-max-widths: (
+    md: 720px,
+    lg: 940px,
+    xl: 1140px,
+    xxl: 1340px
+) !default;
+
+// font sizes
+$fontDefault: 14px;
+$fontSize10: 0.7143rem;
+$fontSize11: 0.786rem;
+$fontSize12: 0.857rem;
+$fontSize13: 0.929rem;
+$fontSize14: 1rem;
+$fontSize15: 1.0714rem;
+$fontSize16: 1.1429rem;
+$fontSize17: 1.2143rem;
+$fontSize18: 1.2857rem;
+$fontSize20: 1.4286rem;
+$fontSize22: 1.5714rem;
+$fontSize23: 1.6429rem;
+$fontSize24: 1.7143rem;
+$fontSize25: 1.7857rem;
+$fontSize26: 1.8571rem;
+$fontSize28: 2rem;
+$fontSize29: 2.0714rem;
+$fontSize30: 2.1429rem;
+$fontSize35: 2.5rem;
+$fontSize40: 2.8571rem;
+$fontSize45: 3.2143rem;
+$fontSize48: 3.4286rem;
+$fontSize50: 3.7143rem;
+$fontSize60: 4.2857rem;
+$fontSize70: 5rem;
+
+// responsive sizes
+$size0em6: 0.71429em;
+$size0em7: 0.78571em;
+$size0em8: 0.85714em;
+$size0em9: 0.92857em;
+$size1em: 1em;
+$size1em1: 1.07143em;
+$size1em2: 1.14286em;
+$size1em4: 1.28571em;
+$size1em6: 1.42857em;
+$size1em8: 1.57143em;
+$size1em10: 1.71429em;
+$size1em12: 1.85714em;
+$size2em: 2em;
+
+//ie 10, 11
+$none: none;
+$active:  active;
+
+//color swatches
+$colorSwatch: (
+    '0010': (black, #000),
+    '0020': (blue, #3393d0),
+    '0030': (green, #81c341),
+    '0040': (grey, #8f979d),
+    '0050': (orange, #ef7922),
+    '0060': (navy, #04559f),
+    '0070': (purple, #c11c8a),
+    '0080': (pink, #fe249a),
+    '0090': (red, $red),
+    '0100': (silver, #bdb8b8),
+    '0110': (yellow, #ffc012),
+    '0120': (white, #fff),
+    '0130': (lightblue, #6ac6b1),
+    '0140': (beige, #f5f5dc),
+    '0160': (brown, #a52a2a)
+);
+
+$frame3dArIcon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMi44NTQzIDI1LjU0MjciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojNTU1O308L3N0eWxlPjwvZGVmcz48ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj48ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIyLjQ3NjUsNS40NDUzYS42NjkzLjY2OTMsMCwwLDEsLjMwNjcuMzAzN2wuMDA5NS4wMmMuMDA2Ni4wMTQ1LjAxMjguMDI5My4wMTg0LjA0NDJhLjY2NzQuNjY3NCwwLDAsMSwuMDQzLjI1djQuNjkxN2EuNjcyMi42NzIyLDAsMSwxLTEuMzQ0MywwVjcuMTM3MmwtMy4wNiwxLjUzYS42NzIyLjY3MjIsMCwxLDEtLjYwMTItMS4yMDI0TDIwLjY3ODksNi4wNSwxNy44NDgzLDQuNjM0M0EuNjcyMi42NzIyLDAsMCwxLDE4LjQ1LDMuNDMxOFpNMjIuODU0MSwxOS40OGEuNjcyMi42NzIyLDAsMCwxLS4xOTU1LjQ4NzUuNjc2OS42NzY5LDAsMCwxLS4xODIxLjEzTDE4LjQ1LDIyLjExMDlhLjY3MjIuNjcyMiwwLDAsMS0uNjAxMi0xLjIwMjVsMi44MzA2LTEuNDE1My0yLjgzMDYtMS40MTUzYS42NzIyLjY3MjIsMCwxLDEsLjYwMTItMS4yMDI0bDMuMDYsMS41M1YxNC43ODc5YS42NzIyLjY3MjIsMCwxLDEsMS4zNDQzLDBabS0yMC42Nzg3LjAxMzVMNS4wMDYsMjAuOTA4NGEuNjcyMi42NzIyLDAsMCwxLS42MDEyLDEuMjAyNUwuMzc3OCwyMC4wOTc0YS42NjkzLjY2OTMsMCwwLDEtLjMwNjctLjMwMzdsLS4wMDk1LS4wMkMuMDU1LDE5Ljc2LjA0ODgsMTkuNzQ0Ny4wNDMyLDE5LjczQS42Ny42NywwLDAsMSwwLDE5LjQ4VjE0Ljc4NzlhLjY3MjIuNjcyMiwwLDAsMSwxLjM0NDQsMHYzLjYxNzZsMy4wNi0xLjUzYS42NzIyLjY3MjIsMCwwLDEsLjYwMTIsMS4yMDI0Wk0xLjM0NDUsNy4xMzcydjMuNjE3NmEuNjcyMi42NzIyLDAsMCwxLTEuMzQ0NCwwVjYuMDYzMWEuNjcyOS42NzI5LDAsMCwxLC4zNzc3LS42MTc4bDQuMDI3LTIuMDEzNUEuNjcyMi42NzIyLDAsMCwxLDUuMDA2LDQuNjM0M0wyLjE3NTQsNi4wNSw1LjAwNiw3LjQ2NDlhLjY3MjIuNjcyMiwwLDEsMS0uNjAxMiwxLjIwMjRabTkuNzctNy4wNmEuNjczNC42NzM0LDAsMCwxLC42MjU0LDBsNC4wMjEsMi4wMTA1QS42NzIyLjY3MjIsMCwxLDEsMTUuMTYsMy4yOWwtMy4wNi0xLjUzVjUuMzc3NGEuNjcyMi42NzIyLDAsMSwxLTEuMzQ0MywwVjEuNzZsLTMuMDYsMS41M2EuNjcyMi42NzIyLDAsMCwxLS42MDEyLTEuMjAyNFpNMTEuNzQsMjUuNDY1N2EuNjczNC42NzM0LDAsMCwxLS42MjU0LDBsLTQuMDIwOS0yLjAxYS42NzIyLjY3MjIsMCwxLDEsLjYwMTItMS4yMDI0bDMuMDYsMS41M1YyMC4xNjUzYS42NzIyLjY3MjIsMCwxLDEsMS4zNDQzLDB2My42MTc2bDMuMDYtMS41M2EuNjcyMi42NzIyLDAsMSwxLC42MDEyLDEuMjAyNFptLjM1OTUtMTMuNjIzM1YxNS40NmEuNjcyMi42NzIyLDAsMCwxLTEuMzQ0MywwVjExLjg0MjRMNy4wOTM1LDEwLjAxMTdhLjY3MjIuNjcyMiwwLDAsMSwuNjAxMi0xLjIwMjRsMy43MzI0LDEuODY2MkwxNS4xNiw4LjgwOTNhLjY3MjIuNjcyMiwwLDAsMSwuNjAxMiwxLjIwMjRaIi8+PC9nPjwvZz48L3N2Zz4=';

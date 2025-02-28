@@ -1,0 +1,245 @@
+@import "bootstrap/scss/mixins";
+
+@mixin box-sizing($value) {
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+
+    &::before,
+    &::after {
+        -webkit-box-sizing: $value;
+        -moz-box-sizing: $value;
+        box-sizing: $value;
+    }
+}
+
+@mixin transition($value) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+}
+
+@mixin transition-advance($value) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+@mixin translateX($x) {
+    @include transform(translateX($x));
+}
+
+@mixin translateY($y) {
+    @include transform(translateY($y));
+}
+
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin border-radius($value) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+}
+
+@mixin opacity($value) {
+    opacity: $value;
+    filter: alpha(opacity=$value);
+}
+
+@mixin displayFlex {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+}
+
+@mixin placeholder($value) {
+    &::placeholder {
+        color: $value;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $value;
+    }
+
+    &::-moz-placeholder {
+        color: $value;
+    }
+
+    &:-ms-input-placeholder {
+        color: $value;
+    }
+
+    &:-moz-placeholder {
+        color: $value;
+    }
+}
+
+@mixin fontAwesome {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin fontSamsonite {
+    font-family: $samsoniteIcon;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin background-gradient($direction, $color...) {
+    background: linear-gradient($direction, $color);
+    background: -webkit-gradient($direction, $color);
+    background: -webkit-linear-gradient($direction, $color);
+    background: -moz-linear-gradient($direction, $color);
+    background: -ms-linear-gradient($direction, $color);
+    background: -o-linear-gradient($direction, $color);
+}
+
+@mixin scrollbar($bgColor, $bgTrackColor, $width, $bdRadius) {
+    &::-webkit-scrollbar-track {
+        border-radius: $bdRadius;
+        background-color: $bgTrackColor;
+    }
+
+    &::-webkit-scrollbar {
+        width: $width;
+        background-color: $bgTrackColor;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: $bdRadius;
+        background-color: $bgColor;
+    }
+}
+
+@mixin animation($value) {
+    -webkit-animation: #{$value};
+    -moz-animation: #{$value};
+    -o-animation: #{$value};
+    animation: #{$value};
+}
+
+@mixin animationName($value) {
+    -webkit-animation-name: $value;
+    animation-name: $value;
+}
+
+@mixin animationDuration($value) {
+    -webkit-animation-duration: $value;
+    animation-duration: $value;
+}
+
+@mixin animationFillMode($value) {
+    -webkit-animation-fill-mode: $value;
+    animation-fill-mode: $value;
+}
+
+@mixin animationDelay($value) {
+    -webkit-animation-delay: $value;
+    animation-delay: $value;
+}
+
+@mixin btnArrowRightCircle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    color: $black;
+    text-align: center;
+    line-height: 35px;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        width: 32px;
+        height: 32px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        width: 34px;
+        height: 34px;
+    }
+
+    .sa-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        @include translate(-50%, -50%);
+    }
+
+    @include border-radius(50%);
+}
+
+@mixin btnWhiteBorderBlack {
+    color: $black;
+    background-color: $white;
+    border: 2px solid $black;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 10px;
+
+    @include border-radius(0);
+}
+
+@mixin btnBlack {
+    @include btnWhiteBorderBlack();
+
+    background-color: $black;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background-color: $black;
+    }
+}
+
+// IE 10+, $value1=none, $value2=active
+
+@mixin media-ie-target($value1, $value2) {
+    @media all and (-ms-high-contrast: $value1), (-ms-high-contrast: $value2) {
+        @content;
+    }
+}

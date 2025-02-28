@@ -1,0 +1,329 @@
+$samsoniteSans: 'SamsoniteSans';
+
+.tbb-main {
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+
+    .btn {
+        &.btn-dark {
+            background: $white;
+            color: $black;
+            border: 2px solid $black;
+
+            @include transition(0.15s ease-in-out);
+
+            &:hover {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+
+    .vh-100 {
+        height: 100vh;
+    }
+
+    .vh-85 {
+        height: 85vh;
+    }
+
+    .vh-90 {
+        height: 90vh;
+    }
+
+    .tbb-square {
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        .tbb-square-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .tbb-border-text-white {
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $white;
+    }
+
+    .tbb-line-sm {
+        width: 50px;
+        height: 2px;
+        background-color: $black;
+    }
+
+    .tbb-select-color {
+        input {
+            display: none;
+        }
+
+        .radiobtn {
+            position: relative;
+            width: 42px;
+            height: 42px;
+            border: 4px solid $white;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                width: 44px;
+                height: 44px;
+                border-radius: 48px;
+                border: 2px solid transparent;
+            }
+
+            img {
+                overflow: hidden;
+                border-radius: 42px;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+            }
+        }
+
+        input:checked ~ .radiobtn {
+            &::after {
+                border-color: $black;
+            }
+        }
+    }
+
+    .tbb-sologan,
+    .text-gotham-bold,
+    .btn {
+        font-weight: 700;
+    }
+
+    .text-helveticaNeue-light {
+        font-weight: 200;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(md) {
+            font-size: 2.5em;
+            text-transform: unset;
+        }
+    }
+
+    h4 {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(md) {
+            text-transform: unset;
+            font-size: 1.8rem;
+        }
+    }
+
+    .sub-section-comment {
+        padding-top: 5px;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 15px;
+        }
+    }
+
+    p {
+        line-height: 20px;
+    }
+
+    .px-4s {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .btn-dark {
+        line-height: 30px;
+    }
+
+    .tbb-header-banner {
+        position: relative;
+        overflow: hidden;
+
+        .tbb-title-bag-best {
+            display: block;
+            width: 100%;
+            height: 30vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .tbb-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            .tbb-top-left,
+            .tbb-top-center,
+            .tbb-top-right,
+            .tbb-bottom-left,
+            .tbb-bottom-center,
+            .tbb-bottom-right {
+                position: absolute;
+                display: block;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .tbb-top-left {
+                bottom: 95%;
+                right: 104%;
+                width: 100%;
+            }
+
+            .tbb-top-center {
+                bottom: 120%;
+                left: 50%;
+                width: 80%;
+
+                @include translateX(-50%);
+
+                @include media-breakpoint-up(sm) {
+                    bottom: 140%;
+                }
+            }
+
+            .tbb-top-right {
+                bottom: 90%;
+                left: 124%;
+                width: 80%;
+            }
+
+            .tbb-bottom-left {
+                top: 50%;
+                right: 110%;
+                width: 100%;
+            }
+
+            .tbb-bottom-center {
+                top: 125%;
+                left: 50%;
+                width: 80%;
+
+                @include translateX(-50%);
+
+                @include media-breakpoint-up(sm) {
+                    bottom: 140%;
+                }
+            }
+
+            .tbb-bottom-right {
+                position: absolute;
+                top: 50%;
+                left: 110%;
+                display: block;
+                width: 80%;
+            }
+        }
+
+        h1 {
+            font-family: $samsoniteSans;
+            font-size: 2.5rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 3.5rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                line-height: initial;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 2.1rem;
+    }
+
+    .tbb-bag-img {
+        margin-top: -17%;
+        width: 85%;
+    }
+
+    .tbb-sologan {
+        padding: 3rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 5rem 13rem;
+        }
+    }
+
+    .col-content-text {
+        @include media-breakpoint-up(xl) {
+            max-width: 35%;
+        }
+    }
+
+    .tbb-bg-bag-banner,
+    .tbb-bg-bag-robust,
+    .tbb-bg-bag-smooth,
+    .tbb-bg-bag-sleek,
+    .tbb-bg-bag-safe {
+        clip: rect(0, auto, auto, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        @supports (-webkit-overflow-scrolling: touch) {
+            background-attachment: scroll;
+        }
+
+        .tbb-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-attachment: inherit;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @include media-breakpoint-up(xl) {
+                position: fixed;
+                background-attachment: fixed;
+            }
+        }
+    }
+
+    .tbb-section {
+        .tbb-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tbb-part-1 {
+            height: 100vh;
+
+            @include media-breakpoint-up(md) {
+                height: auto;
+            }
+        }
+    }
+}

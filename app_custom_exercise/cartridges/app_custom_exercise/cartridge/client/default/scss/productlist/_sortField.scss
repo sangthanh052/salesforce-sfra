@@ -1,0 +1,103 @@
+.sort-field {
+    position: relative;
+
+    &.active {
+        .sort-block {
+            opacity: 1;
+            z-index: 10;
+
+            @include animationDuration(0.5s);
+            @include animationFillMode(both);
+            @include animationName(fadeIn);
+        }
+    }
+
+    &.ns {
+        .sort-block {
+            opacity: 0;
+
+            @include animationDuration(0.5s);
+            @include animationFillMode(both);
+            @include animationName(fadeOut);
+        }
+    }
+
+    label {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: $fontSize15;
+        position: relative;
+        display: inline-block;
+        padding: 8px 50px;
+        margin-bottom: 0;
+        cursor: pointer;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fontSize14;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: $fontSize16;
+        }
+
+        &::before {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            color: $darkBlue;
+            font-size: 18px;
+
+            @include translateY(-50%);
+            @include fontSamsonite;
+        }
+
+        &::before {
+            content: $icon-ico-arrow-bottom;
+            right: 0;
+            font-size: 14px;
+        }
+    }
+
+    select.custom-select {
+        display: none;
+    }
+
+    .sort-block {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: -1;
+        width: 350px;
+        background-color: $white;
+        opacity: 0;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-left: 30px;
+
+        @include transition(all ease-in-out 0.5s);
+
+        ul {
+            max-width: 220px;
+
+            li {
+                border: none;
+                font-size: $fontSize16;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: $fontSize14;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: $fontSize16;
+                }
+
+                &::before {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+    }
+}

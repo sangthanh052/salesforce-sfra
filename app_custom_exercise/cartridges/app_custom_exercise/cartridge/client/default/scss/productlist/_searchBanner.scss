@@ -1,0 +1,137 @@
+.section-search-banner {
+    .image-group {
+        position: relative;
+        background-color: $lightGrayishGreen;
+
+        @include media-breakpoint-up(lg) {
+            position: static;
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-top: -14px;
+        }
+    }
+
+    .image-field {
+        width: 37%;
+
+        @include media-breakpoint-up(lg) {
+            width: 100%;
+        }
+    }
+
+    .category-banner {
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            background-color: $lightGrayishGreen;
+
+            @include displayFlex;
+        }
+    }
+
+    .header-field {
+        top: 48%;
+        width: 60%;
+        z-index: 2;
+        text-align: center;
+        position: absolute;
+
+        @include translate(65%, -50%);
+
+        @include media-breakpoint-up(md) {
+            left: 50%;
+            text-align: unset;
+            width: unset;
+            right: unset;
+
+            @include translate(-50%, -50%);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 100;
+            line-height: 0.8;
+            white-space: nowrap;
+            margin: 0;
+
+            @include media-breakpoint-up(md) {
+                line-height: 1.2;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 4rem;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: $fontSize70;
+            }
+        }
+    }
+
+    .description-action {
+        text-align: center;
+    }
+
+    .banner-description {
+        @include media-breakpoint-up(lg) {
+            display: block;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .card {
+            padding: 10px 25px;
+            font-size: $fontSize14;
+            font-weight: 400;
+            margin-bottom: 0;
+            border: none;
+            line-height: 1.2;
+
+            @include media-breakpoint-up(lg) {
+                background: none;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-right: 80px;
+                padding-left: 30%;
+                font-size: 1.163rem;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 1.454rem;
+            }
+        }
+    }
+
+    .btn-read-more {
+        border: none;
+        background: none;
+        font-size: $fontSize14;
+        padding: 0 0.75rem;
+
+        &:hover,
+        &:focus {
+            outline: 0;
+
+            @include box-shadow(none);
+        }
+
+        .sa-icon {
+            font-size: $fontSize13;
+        }
+
+        .read-more {
+            display: none;
+        }
+
+        &.collapsed {
+            margin-top: 5px;
+
+            .read-more {
+                display: inline-block;
+            }
+
+            .read-close {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,841 @@
+.game-section {
+    background-color: #b0212e;
+    padding: 4rem 0.71428rem;
+
+    h2,
+    h3,
+    p,
+    a,
+    button {
+        font-weight: 900;
+        color: $white;
+    }
+
+    .show-desktop {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    .show-mobile {
+        display: block;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    .game-body {
+        position: relative;
+        border: 5px solid $white;
+        border-radius: 20px;
+        padding: 0 1.33929rem;
+
+        @include media-breakpoint-up(lg) {
+            width: 85%;
+            margin: auto;
+            padding-bottom: 2rem;
+        }
+
+        @include media-breakpoint-up(xml) {
+            max-width: 82rem;
+        }
+
+        .game-title {
+            position: absolute;
+            width: 75%;
+            background-color: #b0212e;
+            top: -24px;
+            left: 50%;
+            text-align: center;
+            @include translateX(-50%);
+
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                top: -28px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 35%;
+                top: -28px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-size: 2.35rem;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .game-main {
+        margin: 3rem 0 0;
+
+        @include media-breakpoint-up(lg) {
+            margin: 2rem 0 0;
+        }
+
+        .segment {
+            padding: 5px;
+            position: relative;
+
+            &.active {
+                .overlay-active {
+                    display: block;
+                }
+
+                .overlay {
+                    display: none;
+                }
+            }
+
+            &.show {
+                .overlay-active {
+                    transform: rotateY(-180deg);
+                    transition: transform 1500ms ease;
+                }
+            }
+
+            .gift-result,
+            .overlay-active {
+                display: none;
+            }
+
+            #coupon-text {
+                position: absolute;
+                text-transform: uppercase;
+                left: 26%;
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+                font-size: 0.65rem;
+                display: none;
+
+                @include media-breakpoint-up(sm) {
+                    left: 28%;
+                    font-size: 1.25rem;
+                }
+
+                @include media-breakpoint-up(md) {
+                    font-size: 1.5rem;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 0.75rem;
+                    left: 30%;
+                }
+
+                @include media-breakpoint-up(xml) {
+                    font-size: 1rem;
+                }
+            }
+
+            #discount-text {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 4em;
+                line-height: 15px;
+                text-align: center;
+                font-size: 1rem;
+                display: none;
+                text-transform: uppercase;
+                @include translateY(-50%);
+
+                &.unlucky {
+                    right: 6%;
+                    font-size: 0.8rem;
+
+                    @include media-breakpoint-up(sm) {
+                        line-height: 24px;
+                        font-size: 1.4rem;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        line-height: 26px;
+                        font-size: 1.5rem;
+                        right: 10%;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 0.85rem;
+                        right: 8%;
+                        line-height: 18px;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        font-size: 1rem;
+                    }
+
+                    @include media-breakpoint-up(xml) {
+                        font-size: 1.25rem;
+                        right: 6.5%;
+                    }
+                }
+
+                @include media-breakpoint-up(sm) {
+                    line-height: 27px;
+                    font-size: 1.75rem;
+                }
+
+                @include media-breakpoint-up(md) {
+                    line-height: 30px;
+                    font-size: 2rem;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    line-height: 20px;
+                    font-size: 1.25rem;
+                }
+
+                @include media-breakpoint-up(xml) {
+                    font-size: 1.5rem;
+                    line-height: 25px;
+                    right: 3%;
+                }
+            }
+        }
+
+        .play-now-section {
+            &.active {
+                .stop-btn {
+                    display: block;
+                }
+
+                .play-now-btn {
+                    display: none;
+                }
+            }
+
+            &.stop-active {
+                .segment-content {
+                    background-color: #f06464;
+                }
+
+                .stop-btn {
+                    pointer-events: none;
+                }
+            }
+
+            &.play-now-active {
+                .segment-content {
+                    background-color: #f06464;
+                }
+
+                .play-now-btn {
+                    pointer-events: none;
+                }
+            }
+
+            .stop-btn {
+                display: none;
+            }
+
+            .play-now-btn {
+                display: block;
+            }
+
+            .segment-content {
+                position: absolute;
+                width: 21vw;
+                height: 21vw;
+                background-color: #d83938;
+                border: 3px solid #960300;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%, -50%);
+
+                @include media-breakpoint-up(lg) {
+                    width: 80%;
+                    height: 55%;
+                    border-radius: 20px;
+                }
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-transform: uppercase;
+                padding: 32% 0;
+                @include translate(-50%, -50%);
+
+                @include media-breakpoint-up(md) {
+                    font-size: 2rem;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    padding: 0;
+                    font-size: 0.75rem;
+                }
+
+                @include media-breakpoint-up(xml) {
+                    font-size: 1.15rem;
+                }
+            }
+        }
+    }
+
+    .game-guideline {
+        margin-top: 2.5rem;
+
+        button {
+            position: relative;
+            width: 100%;
+            height: 3rem;
+            background-color: #cc3241;
+            border: none;
+            outline: none;
+            text-transform: uppercase;
+            text-align: left;
+            padding-left: 1.5rem;
+
+            @include media-breakpoint-up(md) {
+                height: 4rem;
+                font-size: 1.5rem;
+            }
+
+            &::before {
+                position: absolute;
+                font-style: normal;
+                font-weight: 400;
+                content: '\F0DD';
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                height: 1.7857rem;
+                font-size: 1.42857rem;
+                @include translateY(-50%);
+                @include fontAwesome;
+
+                @include media-breakpoint-up(md) {
+                    height: 2.7857rem;
+                }
+            }
+
+            &[aria-expanded=true]::before {
+                content: '\F0DE';
+                height: 0.7857rem;
+
+                @include media-breakpoint-up(md) {
+                    height: 1rem;
+                }
+            }
+        }
+
+        #guideline-content {
+            margin-top: 1rem;
+
+            p {
+                font-size: 1rem;
+                font-weight: 400;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .game-guideline-desktop {
+        @include media-breakpoint-up(lg) {
+            margin: 2rem 0 0;
+        }
+
+        h3 {
+            @include media-breakpoint-up(lg) {
+                text-transform: uppercase;
+                font-size: 1.5rem;
+            }
+
+            @include media-breakpoint-up(xml) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            @include media-breakpoint-up(lg) {
+                font-size: 0.85rem;
+            }
+
+            @include media-breakpoint-up(xml) {
+                font-size: 1rem;
+            }
+        }
+
+        img {
+            position: absolute;
+
+            @include media-breakpoint-up(lg) {
+                width: 30%;
+                right: -8%;
+                bottom: 16%;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: 40%;
+                bottom: 7%;
+            }
+
+            @include media-breakpoint-up(xml) {
+                width: 35%;
+                right: -6%;
+                bottom: 11%;
+            }
+        }
+    }
+
+    .game-result-section {
+        @include media-breakpoint-up(lg) {
+            position: static;
+        }
+    }
+
+    .game-result {
+        margin-top: 2rem;
+        position: relative;
+
+        .prize-title {
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            text-align: center;
+
+            @include media-breakpoint-up(md) {
+                font-size: 2.25rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.5rem;
+            }
+
+            @include media-breakpoint-up(xml) {
+                font-size: 2rem;
+            }
+        }
+
+        .coupon-code {
+            width: 100%;
+            padding: 0.35rem 0;
+            height: 3rem;
+            background-color: #f06464;
+            border: none;
+            outline: none;
+            text-align: center;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin-top: 1rem;
+
+            @include media-breakpoint-up(md) {
+                height: 4rem;
+                padding: 0.5rem 0;
+                font-size: 2.5rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                height: 2.5rem;
+                font-size: 1.25rem;
+            }
+
+            @include media-breakpoint-up(xml) {
+                height: 3rem;
+                font-size: 1.25rem;
+            }
+        }
+
+        .share-email,
+        .copy-coupon {
+            display: block;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 0.875rem;
+            width: 100%;
+            padding: 0.75rem;
+            border: solid 1px $white;
+            pointer-events: none;
+
+            &:focus {
+                background-color: #f06464;
+            }
+
+            &.enable {
+                pointer-events: auto;
+            }
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.15rem;
+                padding: 1rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 0.75rem;
+                padding: 0.75rem;
+            }
+
+            @include media-breakpoint-up(xml) {
+                font-size: 1rem;
+                padding: 0.85rem;
+            }
+        }
+
+        .copy-coupon {
+            &.copied {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    bottom: -9px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    background: rgba($black, 0.72);
+                }
+
+                &::after {
+                    content: 'Copied!';
+                    position: absolute;
+                    z-index: 1;
+                    bottom: -45px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 114px;
+                    height: 36px;
+                    text-transform: none;
+                    color: $white;
+                    font-size: 14px;
+                    line-height: 36px;
+                    text-align: center;
+                    background: rgba($black, 0.72);
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+
+    .game-info {
+        padding-top: 2.5rem;
+        width: 13.5rem;
+        margin: auto;
+
+        @include media-breakpoint-up(md) {
+            width: 16.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 1rem;
+            width: 12rem;
+        }
+
+        @include media-breakpoint-up(xml) {
+            width: 14rem;
+        }
+
+        .item {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 0.85rem;
+            }
+
+            @include media-breakpoint-up(xml) {
+                font-size: 1rem;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 0.85rem;
+            }
+
+            @include media-breakpoint-up(xml) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .social-share {
+        padding-top: 2.5rem;
+        width: 15.5rem;
+        margin: auto;
+
+        @include media-breakpoint-up(md) {
+            width: 16.5rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            width: 12rem;
+            left: 3px;
+            bottom: 0;
+        }
+
+        @include media-breakpoint-up(xml) {
+            width: 13rem;
+            left: 1.25em;
+            bottom: 1.25em;
+        }
+
+        .item-right {
+            text-align: right;
+
+            @include media-breakpoint-up(lg) {
+                text-align: center;
+            }
+
+            @include media-breakpoint-up(xl) {
+                text-align: left;
+            }
+        }
+
+        .item-left {
+            text-align: left;
+
+            @include media-breakpoint-up(lg) {
+                text-align: center;
+            }
+        }
+
+        img {
+            max-width: 50px;
+            margin: 1rem 0 2rem;
+
+            @include media-breakpoint-up(lg) {
+                max-width: 30px;
+            }
+
+            @include media-breakpoint-up(xml) {
+                max-width: 35px;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 0.75rem;
+                margin: 0;
+            }
+
+            @include media-breakpoint-up(xml) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .game-popup {
+        width: 96vw;
+        position: fixed;
+        top: 25%;
+        left: 50%;
+        background-color: #a82936;
+        border: 5px solid $white;
+        border-radius: 20px;
+        display: none;
+        z-index: 3;
+        @include translateX(-50%);
+
+        &.small {
+            @include media-breakpoint-up(md) {
+                width: 28rem;
+            }
+
+            .popup-main {
+                @include media-breakpoint-up(md) {
+                    max-height: 40rem;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 60vw;
+            top: 50%;
+            @include translate(-50%, -50%);
+        }
+
+        .popup-wrapper {
+            position: relative;
+
+            .btn-close-popup {
+                position: absolute;
+                right: 10px;
+                top: -30px;
+                width: 20px;
+                height: 20px;
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    left: 8px;
+                    content: ' ';
+                    height: 20px;
+                    width: 3px;
+                    background-color: $white;
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .popup-main {
+            padding: 0 20px 0 15px;
+            margin: 40px 0 0 15px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            max-height: 60vh;
+            position: relative;
+            direction: rtl;
+
+            @include media-breakpoint-up(lg) {
+                max-height: 40vh;
+            }
+
+            .popup-content {
+                direction: ltr;
+                display: none;
+            }
+
+            &::-webkit-scrollbar {
+                width: 10px;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    width: 2px;
+                    background-color: $white;
+                    height: 100%;
+                    left: 50%;
+                    @include translateX(-50%);
+                }
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $white;
+            }
+
+            .game-tnc {
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    margin-bottom: 0.75em;
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    margin-bottom: 3em;
+                }
+            }
+
+            .game-result {
+                p {
+                    text-align: center;
+                    font-size: 2rem;
+                    margin-bottom: 4rem;
+                }
+            }
+
+            .share-email-content {
+                min-height: 300px;
+                position: relative;
+
+                input {
+                    width: 90%;
+                    padding: 0.5rem;
+                    height: 3rem;
+                    background-color: #f06464;
+                    border: none;
+                    outline: none;
+                    text-align: left;
+                    color: $white;
+                    font-size: 1rem;
+                    margin-bottom: 2em;
+                }
+
+                h3 {
+                    margin-bottom: 20px;
+                    font-size: 1.5em;
+                }
+
+                p {
+                    position: absolute;
+                    bottom: 18%;
+                    font-size: 1rem;
+                    color: #0f0;
+                    display: none;
+
+                    &.error {
+                        color: #f00;
+                    }
+
+                    &.invalid-feedback {
+                        color: #f00;
+                        display: block;
+                    }
+                }
+
+                .send-email {
+                    display: block;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 0.875rem;
+                    width: 90%;
+                    padding: 0.75rem;
+                    border: solid 1px $white;
+                    margin-top: 1.5rem;
+                    cursor: pointer;
+                    background-color: transparent;
+                }
+
+                .form-group {
+                    position: inherit;
+                }
+            }
+        }
+    }
+}
+
+.overlay-popup {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+    opacity: 0.5;
+    display: none;
+}

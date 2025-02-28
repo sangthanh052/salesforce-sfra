@@ -1,0 +1,24 @@
+@mixin flex($width-percentage) {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 $width-percentage;
+    flex: 0 0 $width-percentage;
+    max-width: $width-percentage;
+}
+
+@mixin checkoutProgressDone {
+    cursor: pointer;
+
+    .step-circle {
+        background-color: $black;
+        border-color: $black;
+        color: $white;
+
+        .step-number {
+            display: none;
+        }
+
+        .step-done-icon {
+            display: block;
+        }
+    }
+}

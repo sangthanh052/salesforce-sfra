@@ -1,0 +1,42 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isinclude template="components/modules" />
+
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/collectionPage.js');
+        assets.addCss('/css/search.css');
+    </isscript>
+
+    <div class="collection-page">
+        <div class="section section-search-banner">
+            <isslot id="category-banner" context="category" description="The banner which will be shown at the top in product listing page."
+                context-object="${pdict.category}" />
+        </div>
+
+        <div class="container collection-content">
+            <div class="row">
+
+                <isloop items="${pdict.productSearch.subCategories}" var="subCat" status="status">
+                    <div class="col-12 col-md-6 col-lg-4 collection-item" data-id="${subCat.id}" data-first-char="${!empty(subCat.displayName) ? subCat.displayName.charAt(0).toLowerCase() : ''}">
+                        <div class="item-content">
+                            <h3 class="category-name">
+                                <a href='<isprint value="${subCat.url}" encoding="off" />' title="${subCat.displayName}"><isprint value="${subCat.displayName}" /></a>
+                            </h3>
+                            <div class="category-thumb ${subCat.catBannerID}">
+                                <a href="<isprint value="${subCat.url}" encoding="off" />" title="${subCat.displayName}">
+                                    <isif condition="${status.index < 3}">
+                                        <img src="${subCat.thumbnailURL}" alt="${subCat.displayName}" />
+                                    <iselse/>
+                                        <img src="${URLUtils.staticURL('images/three-dots_100-100.svg')}" data-src="${subCat.thumbnailURL}" alt="${subCat.displayName}" />
+                                    </isif>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </isloop>
+
+            </div>
+        </div>
+    </div>
+</isdecorate>

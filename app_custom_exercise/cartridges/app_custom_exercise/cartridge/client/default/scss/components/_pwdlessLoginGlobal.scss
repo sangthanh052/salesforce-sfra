@@ -1,0 +1,97 @@
+.pwdless-login-container,
+#request-passwordless-login-modal {
+    .passwordless-form,
+    .passwordless-token-form {
+        width: 100%;
+        padding-bottom: 1.5rem;
+
+        .form-group {
+            .form-control {
+                &.has-content ~ label,
+                &:focus ~ label {
+                    top: -0.7143em;
+                    transform-origin: left;
+                    @include transform(scale(0.8));
+                }
+            }
+        }
+
+        .btn-block {
+            border: 1px solid $colorBlack;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: $colorBlack;
+        }
+
+        .btn-secondary {
+            background-color: $colorWhite;
+            color: $colorBlack !important;
+        }
+
+        .g-recaptcha-error-msg {
+            color: $colorRed;
+        }
+    }
+
+    .passwordless-token-form {
+        .alert {
+            border: none;
+            font-weight: 600;
+            color: $colorRed;
+        }
+
+        .btn-resend-otp {
+            color: $colorBlack !important;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        .pwdless-token {
+            &.pwdless-token-mobile {
+                .col {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .passwordless-form {
+        #passwordless-email {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        #passwordless-email {
+            font-size: 16px;
+        }
+    }
+
+    .passwordless-token-form {
+        .token-input {
+            &:focus {
+                box-shadow: none !important;
+                border-color: $colorLightGray;
+            }
+        }
+    }
+}
+
+.login-page {
+    .pwdless-login-form-container {
+        @include media-breakpoint-up (md) {
+            width: 42.5%;
+            float: left;
+
+            .login {
+                width: 100% !important;
+            }
+
+            &.pwdless-checkout-login-form-container {
+                width: 100% !important;
+            }
+        }
+    }
+}

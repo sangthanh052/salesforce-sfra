@@ -1,0 +1,570 @@
+@keyframes aniFadeInContent {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.eco-main {
+    opacity: 0;
+}
+
+.ssn-body {
+    .eco-main {
+        opacity: 1;
+        overflow: hidden;
+        font-size: 14px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 16px;
+            margin-top: 100px;
+        }
+
+        h1,
+        h2,
+        h3,
+        .h1,
+        .h2,
+        .h3,
+        p,
+        span {
+            font-weight: 700;
+        }
+
+        p,
+        span {
+            line-height: 20px;
+
+            @include media-breakpoint-up(lg) {
+                line-height: 22px;
+            }
+        }
+
+        button {
+            &.btn-success {
+                font-weight: 700;
+                padding-top: 8px;
+                padding-right: 8px;
+            }
+        }
+    }
+
+    .content-slot-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.ssn-body {
+    .eco-main {
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .ssn-section {
+            position: relative;
+
+            .eco-bottom {
+                .btn-next-section {
+                    background-color: transparent;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .eco-section-1 {
+            .eco-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                .eco-des {
+                    p {
+                        max-width: 600px;
+                        line-height: 25px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .eco-bottom {
+                bottom: 5%;
+                @include media-breakpoint-up(lg) {
+                    bottom: 10%;
+                }
+            }
+
+            &.has-animation {
+                .eco-bg {
+                    opacity: 0;
+                }
+
+                .eco-content {
+                    opacity: 0;
+                }
+            }
+
+            &.load-animation {
+                .eco-bg {
+                    animation: aniFadeIn 1s;
+                    animation-timing-function: ease-in-out;
+                    opacity: 1;
+                }
+
+                .eco-content {
+                    animation: aniFadeInContent 2s;
+                    animation-timing-function: ease-in-out;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .eco-section-2 {
+            min-height: 400px;
+            padding-top: 0;
+            height: 65vh;
+
+            .eco-content {
+                position: relative;
+                z-index: 2;
+
+                .eco-des {
+                    p {
+                        margin-bottom: 80px;
+                    }
+
+                    &.has-animation {
+                        opacity: 0;
+
+                        .btn {
+                            opacity: 0;
+                        }
+                    }
+
+                    &.load-animation {
+                        animation: aniFadeInContent 1s;
+                        animation-timing-function: ease-in-out;
+                        opacity: 1;
+
+                        .btn {
+                            animation: aniFadeInContent 1.5s;
+                            animation-timing-function: ease-in-out;
+                            opacity: 1;
+                        }
+                    }
+
+                    .eco-title {
+                        max-width: 620px;
+                    }
+                }
+            }
+
+            .eco-bg {
+                position: absolute;
+                bottom: -25vh;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .eco-bottom {
+                bottom: -10%;
+
+                @include media-breakpoint-up(lg) {
+                    bottom: -30%;
+                }
+            }
+        }
+
+        .eco-section-3 {
+            min-height: 400px;
+            height: 100vh;
+
+            .eco-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+
+                .eco-des {
+                    font-size: 12px;
+
+                    @include media-breakpoint-up(lg) {
+                        font-size: 14px;
+                    }
+
+                    .eco-title {
+                        .h1 {
+                            font-size: 54px;
+                            line-height: 1;
+                        }
+
+                        .h2 {
+                            font-size: 40px;
+                            line-height: 1;
+                        }
+
+                        @include media-breakpoint-up(lg) {
+                            .h1 {
+                                font-size: 80px;
+                                margin-right: -20%;
+                            }
+
+                            .h2 {
+                                font-size: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .eco-bg {
+                position: relative;
+                top: 0;
+                height: 120%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+
+                    @include media-ie-target('none', 'active') {
+                        height: auto;
+                    }
+                }
+            }
+
+            .eco-bottom {
+                bottom: 10%;
+            }
+
+            &.has-animation {
+                .ani-1,
+                .ani-2,
+                .ani-3 {
+                    opacity: 0;
+                }
+            }
+
+            &.load-animation {
+                .ani-1 {
+                    @include animation(aniFadeIn 1s ease-in-out);
+
+                    opacity: 1;
+                }
+
+                .ani-2 {
+                    @include animation(aniFadeInContent 1s ease-in-out);
+
+                    opacity: 1;
+                }
+
+                .ani-3 {
+                    @include animation(aniFadeInContent 1.5s ease-in-out);
+
+                    opacity: 1;
+                }
+            }
+        }
+
+        .eco-section-4 {
+            height: 55vh;
+
+            @include media-breakpoint-up(lg) {
+                min-height: 400px;
+                height: 70vh;
+            }
+
+            .eco-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .eco-bg {
+                position: absolute;
+                top: -25vh;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .eco-bottom {
+                bottom: 10%;
+            }
+
+            &.has-animation {
+                .eco-title {
+                    opacity: 0;
+                }
+            }
+
+            &.load-animation {
+                .eco-title {
+                    opacity: 1;
+
+                    @include animation(aniFadeInContent 1s ease-in-out);
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            .eco-section-6 {
+                .eco-text-vertical {
+                    .eco-text {
+                        position: relative;
+                        top: 0;
+                        left: -30%;
+                        width: 60vh;
+                        height: 100%;
+                        white-space: nowrap;
+                        transform: rotate(90deg);
+
+                        .eco-title {
+                            h2 {
+                                margin-left: -15%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .eco-section-5,
+            .eco-section-7 {
+                .eco-text-vertical {
+                    .eco-text {
+                        position: relative;
+                        bottom: -15%;
+                        width: 100%;
+                        height: 100%;
+                        white-space: nowrap;
+                        transform: rotate(-90deg);
+
+                        .eco-title {
+                            h2 {
+                                padding-left: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .eco-section-5,
+        .eco-section-7 {
+            .eco-bg {
+                left: 0;
+            }
+        }
+
+        .eco-section-6 {
+            .eco-bg {
+                right: 0;
+            }
+        }
+
+        .eco-section-5,
+        .eco-section-6,
+        .eco-section-7 {
+            padding-top: 15vh;
+            padding-bottom: 5vh;
+
+            .eco-content {
+                position: relative;
+                z-index: 1;
+
+                .eco-des {
+                    p {
+                        font-weight: 100;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        .eco-text-vertical {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+
+                            .eco-text {
+                                .eco-title {
+                                    position: relative;
+                                    right: 0;
+                                    width: 100%;
+                                    top: 50%;
+
+                                    @include translateY(-50%);
+
+                                    h2 {
+                                        font-size: 70px;
+                                    }
+
+                                    p {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        max-width: 640px;
+                        line-height: 25px;
+                    }
+                }
+
+                .eco-video-wrap {
+                    overflow: hidden;
+
+                    @include media-breakpoint-up(lg) {
+                        height: 60vh;
+                    }
+
+                    .eco-video {
+                        position: relative;
+                        top: 0;
+                        padding-bottom: 56.25%;
+                        height: 0;
+                        overflow: hidden;
+                        max-width: 100%;
+                        height: auto;
+
+                        @include media-breakpoint-up(lg) {
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        object,
+                        embed,
+                        iframe {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            .eco-bg {
+                position: absolute;
+                top: 10%;
+                width: 100%;
+                bottom: 10%;
+
+                @include media-breakpoint-up(lg) {
+                    max-width: 80%;
+                    top: 20%;
+                    bottom: 0;
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        .eco-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 5;
+        }
+
+        @include media-breakpoint-up(lg) {
+            .eco-section-5,
+            .eco-section-6,
+            .eco-section-7 {
+                &.ani-move-next {
+                    .eco-text-vertical {
+                        @include translateY(100vh);
+                    }
+
+                    .eco-text-vertical {
+                        animation: aniSlideOutDown-100 1s;
+                        animation-timing-function: ease-in;
+                    }
+                }
+
+                &.ani-move-prev {
+                    .eco-text-vertical {
+                        @include translateY(-100vh);
+                    }
+
+                    .eco-text-vertical {
+                        animation: aniSlideOutUp-100 1s;
+                        animation-timing-function: ease-in;
+                    }
+                }
+
+                &.current-view {
+                    &.ani-move-next {
+                        .eco-text-vertical {
+                            animation: aniSlideInUp-100 1s;
+                            animation-timing-function: ease-in-out;
+                        }
+
+                        .eco-text-vertical {
+                            @include translateY(0);
+                        }
+                    }
+
+                    &.ani-move-prev {
+                        .eco-text-vertical {
+                            animation: aniSlideInDown-100 1s;
+                            animation-timing-function: ease-in-out;
+                        }
+
+                        .eco-text-vertical {
+                            @include translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.eco-modal-video {
+    .eco-modal-btn-close {
+        position: absolute;
+        top: -35px;
+        right: -25px;
+        z-index: 1;
+        color: $white;
+        text-shadow: none;
+        opacity: 1;
+        font-size: 2rem;
+    }
+
+    .modal-dialog {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .modal-content {
+        background-color: $black;
+    }
+
+    #vimeo {
+        min-height: 47vh;
+    }
+}

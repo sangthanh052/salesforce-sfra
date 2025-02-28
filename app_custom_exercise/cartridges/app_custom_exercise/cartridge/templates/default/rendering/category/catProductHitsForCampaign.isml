@@ -1,0 +1,65 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<isinclude template="components/modules" />
+
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+
+        // Hook for Google recaptcha
+        if (dw.system.HookMgr.hasHook('app.recaptcha.getAPIUrl')) {
+            var recaptchaAPI = dw.system.HookMgr.callHook('app.recaptcha.getAPIUrl', 'getUrl', null);
+            if (recaptchaAPI) assets.addJs(recaptchaAPI);
+        }
+    </isscript>
+    <div class="promotion-wrapper search-results-wrapper">
+        <div class="section search-results">
+            <div class="container">
+                <div class="row search-results-head">
+                    <div class="col-6 results-head-left breadcrumbs-wrapper">
+                        <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-slot-wrapper container">
+            <div class="firstly-content">
+                <isslot id="cat-landing-slotbanner-m" context="category"
+                    description="Banner at the top of Category Landing Pages" context-object="${pdict.category}" />
+            </div>
+
+            <div class="secondary-content">
+                <isslot id="cat-landing-slotbottom-m" context="category"
+                    description="First slot below the Category Banner" context-object="${pdict.category}" />
+            </div>
+        </div>
+
+        <isset name="isEnableAssociateProductList"
+            value="${dw.system.Site.getCurrent().getCustomPreferenceValue('isEnableAssociateProductList')}"
+            scope="page" />
+
+        <div class="product-list-campaign" id="product-list-campaign">
+            <isif condition="${!empty(isEnableAssociateProductList) && isEnableAssociateProductList}">
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+
+                    <div class="product-grid-wrapper container">
+                        <div class="product-grid row">
+                            <isinclude template="search/productGrid" />
+                        </div>
+                    </div>
+                <iselse/>
+                    <isinclude template="search/noResultsProduct" />
+                </isif>
+            </isif>
+        </div>
+    </div>
+    <isinclude template="product/productTileTemplate" />
+
+    <iscomment>
+        hook for GA and GTM tracking & other integration which need to inject script to confirmation page
+        IMPORTANT: Note that this hook will be called to cached as well as uncached pages
+        which means you need to put privacy information into another remote include
+    </iscomment>
+    ${dw.system.HookMgr.callHook('app.template.campaignPage', 'htmlCampaign', pdict.productSearch) || ''}
+</isdecorate>
